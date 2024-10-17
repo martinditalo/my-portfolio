@@ -148,50 +148,46 @@
 }
 
 .content__container__list {
-  font-size: 3.1rem;
+  font-family: monospace;
+  font-size: 2.8rem;
   height: 110px;
   margin-top: 0;
   padding-left: 2.8rem;
   text-align: left;
   list-style: none;
   animation: contentChange 12s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  color: #f39c12;
 }
 
 @keyframes contentChange {
   0% {
     transform: translateY(0) rotate(0deg);
     opacity: 1;
-    color: #ecf0f1ee;
   }
 
   20% {
     transform: translateY(-120px) rotate(-2deg);
     opacity: 0.8;
-    color: #f39c12;
   }
 
   40% {
     transform: translateY(-240px) rotate(-4deg);
     opacity: 0.6;
-    color: #ffe600;
   }
 
   60% {
     transform: translateY(-360px) rotate(-2deg);
     opacity: 0.8;
-    color: #2ecc71;
   }
 
   80% {
     transform: translateY(-240px) rotate(0deg);
     opacity: 1;
-    color: #3498db;
   }
 
   100% {
     transform: translateY(0) scale(1) rotate(0deg);
     opacity: 1;
-    color: #ecf0f1;
   }
 }
 

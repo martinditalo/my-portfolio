@@ -1,0 +1,243 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.menu {
+  min-width: 100px;
+  width: 70%;
+  max-width: 320px;
+
+  background-color: black;
+  color: #fff;
+}
+
+.content {
+  width: 100%;
+}
+
+.menu-button {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 15px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu-button .bar:nth-of-type(1) {
+  margin-top: 0px;
+}
+
+.menu-button .bar:nth-of-type(3) {
+  margin-bottom: 0px;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 45px;
+  height: 3px;
+  margin: 12px auto;
+  background-color: #ef6817;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu-button:hover .bar:nth-of-type(1) {
+  -webkit-transform: translateY(1.5px) rotate(-4.5deg);
+  -ms-transform: translateY(1.5px) rotate(-4.5deg);
+  transform: translateY(1.5px) rotate(-4.5deg);
+}
+
+.menu-button:hover .bar:nth-of-type(2) {
+  opacity: 0.9;
+}
+
+.menu-button:hover .bar:nth-of-type(3) {
+  -webkit-transform: translateY(-1.5px) rotate(4.5deg);
+  -ms-transform: translateY(-1.5px) rotate(4.5deg);
+  transform: translateY(-1.5px) rotate(4.5deg);
+}
+
+.cross .bar:nth-of-type(1) {
+  -webkit-transform: translateY(15px) rotate(-45deg);
+  -ms-transform: translateY(15px) rotate(-45deg);
+  transform: translateY(15px) rotate(-45deg);
+}
+
+.cross .bar:nth-of-type(2) {
+  opacity: 0;
+}
+
+.cross .bar:nth-of-type(3) {
+  -webkit-transform: translateY(-15px) rotate(45deg);
+  -ms-transform: translateY(-15px) rotate(45deg);
+  transform: translateY(-15px) rotate(45deg);
+}
+
+.cross:hover .bar:nth-of-type(1) {
+  -webkit-transform: translateY(13.5px) rotate(-40.5deg);
+  -ms-transform: translateY(13.5px) rotate(-40.5deg);
+  transform: translateY(13.5px) rotate(-40.5deg);
+}
+
+.cross:hover .bar:nth-of-type(2) {
+  opacity: 0.1;
+}
+
+.cross:hover .bar:nth-of-type(3) {
+  -webkit-transform: translateY(-13.5px) rotate(40.5deg);
+  -ms-transform: translateY(-13.5px) rotate(40.5deg);
+  transform: translateY(-13.5px) rotate(40.5deg);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* loading */
+
+#content-hidden{
+  visibility: hidden;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 2em;
+}
+
+.motorWrapper {
+  width: 800px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+
+
+.motorcycle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: motion 4s linear infinite;
+  transform: scaleX(-1);
+}
+
+
+
+.road {
+  width: 100%;
+  height: 1.5px;
+  background-color: #282828;
+  position: relative;
+  bottom: 0;
+  align-self: flex-end;
+  border-radius: 3px;
+}
+.road::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background-color: #282828;
+  right: -50%;
+  border-radius: 3px;
+  animation: roadAnimation 1.4s linear infinite;
+}
+.road::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  background-color: #282828;
+  right: -65%;
+  border-radius: 3px;
+  animation: roadAnimation 1.4s linear infinite;
+}
+
+.lampPost {
+  position: absolute;
+  bottom: 0;
+  right: -90%;
+  height: 90px;
+  animation: roadAnimation 4s linear infinite;
+}
+
+.tree{
+  position: absolute;
+  bottom: -10px;
+  right: -10%;
+  height: 90px;
+  animation: roadAnimation 4s linear infinite;
+}
+
+@keyframes roadAnimation {
+  0% {
+    transform: translateX(-1800px);
+  }
+  20% {
+    transform: translateX(-1200px);
+  }
+  80% {
+    transform: translateX(-800px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes motion {
+  0% {
+    transform: translateY(2px) translateX(0px);
+  }
+  10% {
+    transform: translateY(2px) translateX(-100px);
+  }
+  80% {
+    transform: translateY(2px) translateX(-200px);
+  }
+  90% {
+    transform: translateY(2px) translateX(-300px);
+  }
+  100% {
+    transform: translateY(2px) translateX(-750px);
+  }
+}

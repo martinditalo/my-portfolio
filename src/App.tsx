@@ -1,11 +1,10 @@
-import "./App.css";
-import 'animate.css';
-import { Nav } from "./components/nav";
 import { MainPage } from "./pages/main-page";
+import "./App.css";
+import "animate.css";
 const App = () => {
+
   return (
     <>
-      <Nav />
       <MainPage />
     </>
   );

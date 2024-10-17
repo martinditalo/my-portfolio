@@ -1,9 +1,10 @@
 import { ReactElement } from "react";
 import { ScrollComponent } from "../../components/scroll-pages";
 import { FireEffect } from "../../components/fire-effect";
-import { TechStacks } from "../../components/tech-stacks";
+// import { TechStacks } from "../../components/tech-stacks";
 
 import "./MainPage.scss";
+import { Profile } from "../../components/profile-card";
 
 const MainPage = (): ReactElement => {
   return (
@@ -126,8 +127,8 @@ const MainPage = (): ReactElement => {
                       N
                     </span> */}
                   </div>
-                  <div className="w-1/2 h-2/3 flex items-center justify-evenly flex-col pb-32">
-                    <TechStacks />
+                  <div className="">
+                    <Profile />
                   </div>
                 </div>
               </div>
@@ -156,7 +157,7 @@ const MainPage = (): ReactElement => {
                 data-scroll-target="#direction"
                 data-scroll-delay="0.05"
               >
-                I LOVE FRONT END!!
+                FRONT-END IS ♥ !!
               </span>
             </div>
             <div className="techstack-item _three">
