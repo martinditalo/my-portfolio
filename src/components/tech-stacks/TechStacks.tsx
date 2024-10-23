@@ -3,10 +3,6 @@ import "./TechStacks.scss";
 const TechStacks = (): ReactElement => {
   return (
     <>
-      <div className="loader animate-pulse">
-        <span >FRONT-END Stack</span>
-        <span>FRONT-END Stack</span>
-      </div>
       <div className="cube-container">
         <div className="cube">
           <div className="face front flex items-center justify-center">

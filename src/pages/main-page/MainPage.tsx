@@ -11,132 +11,59 @@ const MainPage = (): ReactElement => {
     <>
       <ScrollComponent>
         <main className="main-wrapper" data-scroll-section>
-          <section
-            className="intro-section h-screen"
+          <div
+            className="c-fixed_wrapper pt-10"
             data-scroll
-            data-scroll-speed="1"
+            data-scroll-call="dynamicBackground"
+            data-scroll-repeat
           >
-            <div className="container mx-auto">
-              <div className="intro-wrapper h-screen">
-                <div className="h-full w-full flex items-center justify-center">
-                  <div className="intro-text w-1/2 h-full" data-scroll>
-                    <div className="intro-container">
-                      <div className="content">
-                        <div className="content__container">
-                          <p className="content__container__text">Hi,</p>
+            <hr />
+            <div className="c-fixed_target" id="fixed-target"></div>
+            <div
+              className="c-fixed"
+              data-scroll
+              data-scroll-sticky
+              data-scroll-target="#fixed-target"
+            >
+              <section className="intro-section h-screen">
+                <div className="intro-wrapper h-screen">
+                  <div className="w-full flex items-center justify-center">
+                    <div className="intro-text w-1/2" data-scroll>
+                      <div className="intro-container">
+                        <div className="content">
+                          <div className="content__container">
+                            <p className="content__container__text">Hi,</p>
 
-                          <ul className="content__container__list">
-                            <li className="content__container__list__item">
-                              I'm Martin
-                            </li>
-                            <li className="content__container__list__item">
-                              Programmers !
-                            </li>
-                            <li className="content__container__list__item">
-                              Geeks !
-                            </li>
-                            <li className="content__container__list__item">
-                              Developers !
-                            </li>
-                          </ul>
+                            <ul className="content__container__list">
+                              <li className="content__container__list__item">
+                                I'm Martin
+                              </li>
+                              <li className="content__container__list__item">
+                                Programmers !
+                              </li>
+                              <li className="content__container__list__item">
+                                Geeks !
+                              </li>
+                              <li className="content__container__list__item">
+                                Developers !
+                              </li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    {/* <span
-                      data-scroll=""
-                      data-scroll-delay="0.13"
-                      data-scroll-speed="6"
-                    >
-                      H
-                    </span>
-                    <span
-                      data-scroll=""
-                      data-scroll-delay="0.12"
-                      data-scroll-speed="6"
-                    >
-                      i
-                    </span>
-                    <span
-                      data-scroll=""
-                      data-scroll-delay="0.11"
-                      data-scroll-speed="6"
-                    >
-                      ,&nbsp;
-                    </span>
-                    <span
-                      data-scroll=""
-                      data-scroll-delay="0.1"
-                      data-scroll-speed="6"
-                    >
-                      I
-                    </span>
-                    <span
-                      data-scroll=""
-                      data-scroll-delay="0.09"
-                      data-scroll-speed="6"
-                    >
-                      '
-                    </span>
-                    <span
-                      data-scroll=""
-                      data-scroll-delay="0.08"
-                      data-scroll-speed="6"
-                    >
-                      m&nbsp;
-                    </span>
-                    <span
-                      data-scroll=""
-                      data-scroll-delay="0.07"
-                      data-scroll-speed="6"
-                    >
-                      M
-                    </span>
-                    <span
-                      data-scroll=""
-                      data-scroll-delay="0.06"
-                      data-scroll-speed="6"
-                    >
-                      A
-                    </span>
-                    <span
-                      data-scroll=""
-                      data-scroll-delay="0.05"
-                      data-scroll-speed="6"
-                    >
-                      R
-                    </span>
-                    <span
-                      data-scroll=""
-                      data-scroll-delay="0.04"
-                      data-scroll-speed="6"
-                    >
-                      T
-                    </span>
-                    <span
-                      data-scroll=""
-                      data-scroll-delay="0.03"
-                      data-scroll-speed="6"
-                    >
-                      I
-                    </span>
-                    <span
-                      data-scroll=""
-                      data-scroll-delay="0.02"
-                      data-scroll-speed="6"
-                    >
-                      N
-                    </span> */}
-                  </div>
-                  <div className="">
-                    <Profile />
+                    <div className="animate__animated animate__flip">
+                      <Profile />
+                    </div>
                   </div>
                 </div>
-              </div>
+              </section>
             </div>
-          </section>
+          </div>
+          <hr />
           <section className="techstacks-section h-screen" id="direction">
             <div className="fire-wrapper">
-              <FireEffect data-scroll-sticky />
+              <FireEffect />
             </div>
             <div className="techstack-item _one">
               <span

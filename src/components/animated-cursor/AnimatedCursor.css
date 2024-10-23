@@ -1,0 +1,26 @@
+.animated-cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  transform: translate(-50%, -50%) scale(0.1);
+  z-index: 9999;
+  transition: transform 0.1s ease;
+  pointer-events: none;
+  cursor: none;
+}
+
+.animated-cursor.clicked {
+  transform: scale(0.25); /* Scale up on click */
+  .cube {
+    animation: spin 1.5s infinite linear;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+  100% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+}

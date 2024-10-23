@@ -13,7 +13,6 @@
 
       .intro-text {
         display: inline-block;
-        padding-top: 26%;
         line-height: 1.1;
         margin-left: 1.25rem;
         vertical-align: middle;
@@ -268,5 +267,25 @@
 
   100% {
     transform: translateX(0) rotate(0deg);
+  }
+}
+
+
+
+.c-fixed_wrapper{
+  height: 95vh;
+  overflow: hidden;
+  position: relative;
+  .c-fixed_target{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -100vh;
+    bottom: -100vh;
+  }
+  
+  .c-fixed{
+    height: 100%;
+    mix-blend-mode: multiply;
   }
 }

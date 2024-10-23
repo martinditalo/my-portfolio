@@ -1,14 +1,14 @@
 .cube-container {
+    position: absolute;
     width: 200px;
     height: 200px;
     perspective: 800px;
     margin: 50px auto;
-    transition: 0.8s ease-out;
+    top: -151px;
+    left: -110px;
+    user-select: none;
 }
 
-.cube-container:hover {
-    transform: scale(2);
-}
 
 .cube {
     position: relative;
@@ -34,26 +34,33 @@
 
 @keyframes borderColorShift {
     0% {
-        border-image-source: linear-gradient(45deg, #4a90e2, #50e3c2);
+        border-image-source: linear-gradient(45deg, #ef6817, #ffff);
     }
+
     25% {
-        border-image-source: linear-gradient(45deg, #50e3c2, #4a90e2);
+        border-image-source: linear-gradient(45deg, #ffff, #ef6817);
     }
+
     50% {
-        border-image-source: linear-gradient(45deg, #4a90e2, #d41717);
+        border-image-source: linear-gradient(45deg, #ef6817, #ffff);
     }
+
     75% {
-        border-image-source: linear-gradient(45deg, #dd2020, #4a90e2);
+        border-image-source: linear-gradient(45deg, #ffff, #ef6817);
     }
+
     100% {
-        border-image-source: linear-gradient(45deg, #4a90e2, #50e3c2);
+        border-image-source: linear-gradient(45deg, #ef6817, #ffff);
     }
 }
 
 @keyframes borderPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         border-width: 4px;
     }
+
     50% {
         border-width: 8px;
     }
@@ -87,6 +94,7 @@
     0% {
         transform: rotateX(0) rotateY(0) rotateZ(0);
     }
+
     100% {
         transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
     }
@@ -96,36 +104,38 @@
 
 .loader {
     position: relative;
-  }
-  
-  .loader span {
+}
+
+.loader span {
     position: absolute;
     color: #fff;
     transform: translate(-50%, -50%);
     font-size: 38px;
     letter-spacing: 4px;
     width: 400px;
-  }
-  
-  .loader span:nth-child(1) {
+}
+
+.loader span:nth-child(1) {
     color: transparent;
     -webkit-text-stroke: 0.3px rgb(196, 196, 196);
-  }
-  
-  .loader span:nth-child(2) {
+}
+
+.loader span:nth-child(2) {
     color: white;
     -webkit-text-stroke: 1px white;
     animation: clipPath 3s ease-in-out infinite;
-  }
-  
-  @keyframes clipPath {
-    0%, 100% {
-      clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 
-       54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+}
+
+@keyframes clipPath {
+
+    0%,
+    100% {
+        clip-path: polygon(0% 45%, 15% 44%, 32% 50%,
+                54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
     }
-  
+
     50% {
-      clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 
-       51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+        clip-path: polygon(0% 60%, 16% 65%, 34% 66%,
+                51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
     }
-  }
+}

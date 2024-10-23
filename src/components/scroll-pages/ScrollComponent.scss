@@ -3,6 +3,23 @@
 
 }
 
+.page-wrapper::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  z-index: -1;
+  background-image: url('~/public/assets/images/bg-image.webp');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
 h1 {
   font-size: 120px;
 }
@@ -13,6 +30,6 @@ h1 {
   height: 100vh;
 }
 
-.c-scrollbar_thumb{
+.c-scrollbar_thumb {
   background: #ef6817 !important;
 }

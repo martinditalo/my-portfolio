@@ -39,14 +39,13 @@
 }
 
 .card .info {
-  font-weight: 400;
   color: white;
   display: block;
   text-align: center;
-  font-size: .8em;
+  font-size: 0.9em;
   margin: 1em;
   font-family: monospace;
-  line-height: 34px;
+  line-height: 28px;
 }
 
 .profile-img {
@@ -82,9 +81,10 @@
 button {
   display: block;
   background: #ef6817;
+  font-size: 1.2rem;
 }
 
-.arrow-bounce {
+.arrow-bounce {   
   margin: 10px;
   animation: bounce 2s infinite;
 }
