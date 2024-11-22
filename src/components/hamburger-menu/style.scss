@@ -1,0 +1,166 @@
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  z-index: 51;
+  position: relative;
+  width: 40px;
+  cursor: pointer;
+  display: block;
+  height: calc(4px * 3 + 11px * 2);
+}
+
+.bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: calc(4px / 2);
+  background: #a79774;
+  color: inherit;
+  opacity: 1;
+  transition: none 0.35s cubic-bezier(0.5, -0.35, 0.35, 1.5) 0s;
+}
+
+/***** Spin Animation *****/
+
+.bar--top {
+  bottom: calc(50% + 11px + 4px / 2);
+  transition-property: bottom, transform;
+  transition-delay: calc(0s + 0.35s), 0s;
+}
+
+.bar--middle {
+  top: calc(50% - 4px / 2);
+  transition-property: opacity;
+  transition-delay: calc(0s + 0.35s);
+}
+
+.bar--bottom {
+  top: calc(50% + 11px + 4px / 2);
+  transition-property: top, transform;
+  transition-delay: calc(0s + 0.35s), 0s;
+}
+
+#checkbox:checked+.toggle .bar--top {
+  bottom: calc(50% - 4px / 2);
+  transform: rotate(135deg);
+  transition-delay: 0s, calc(0s + 0.35s);
+}
+
+#checkbox:checked+.toggle .bar--middle {
+  opacity: 0;
+  transition-duration: 0s;
+  transition-delay: calc(0s + 0.35s);
+}
+
+#checkbox:checked+.toggle .bar--bottom {
+  top: calc(50% - 4px / 2);
+  transform: rotate(225deg);
+  transition-delay: 0s, calc(0s + 0.35s);
+}
+
+.overlay-open .page-overlay {
+  -webkit-clip-path: inset(0% 0% 0% 0%);
+  clip-path: inset(0% 0% 0% 0%);
+}
+
+.page-overlay {
+  background-color: antiquewhite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: auto;
+  z-index: 50;
+  -webkit-clip-path: inset(0% 0% 100% 0%);
+  clip-path: inset(0% 0% 100% 0%);
+  -webkit-transition: 0.7s -webkit-clip-path ease-in-out;
+  transition: 0.7s -webkit-clip-path ease-in-out;
+  transition: 0.7s clip-path ease-in-out;
+  transition: 0.7s clip-path ease-in-out, 0.7s -webkit-clip-path ease-in-out;
+  font-size: clamp(1rem, 1vw + 1rem, 2rem);
+}
+
+.menu-text {
+  font-size: clamp(1rem, 2vw + 1rem, 3.5rem);
+  font-family: "LondrinaSketch", sans-serif;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+
+
+}
+
+.menu-text::before,
+.menu-text::after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+.menu-text::before {
+  content: '';
+}
+
+
+
+.menu-text--leda {
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+.menu-text--leda::before {
+  height: 2px;
+  top: calc(100% - 5px);
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+}
+
+.menu-text--leda:hover::before {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
+}
+
+.menu-text--leda::after {
+  content: attr(data-text);
+  height: 100%;
+  top: 0;
+  background: none;
+  transform-origin: 100% 50%;
+  transform: translate3d(150%, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+}
+
+.menu-text--leda:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.menu-text--leda span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+}
+
+.menu-text--leda:hover span {
+  transform: translate3d(-150%, 0, 0);
+}
+
+.menu-name {
+  font-family: "KolkerBrush", sans-serif;
+}

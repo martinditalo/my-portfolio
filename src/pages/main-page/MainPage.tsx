@@ -1,17 +1,17 @@
 import { ReactElement } from "react";
-import { ScrollComponent } from "../../components/scroll-pages";
-import { FireEffect } from "../../components/fire-effect";
+// import { FireEffect } from "../../components/fire-effect";
+import { Intro } from "../../components/introduction";
+
 // import { TechStacks } from "../../components/tech-stacks";
 
 import "./MainPage.scss";
-import { Profile } from "../../components/profile-card";
+// import { Profile } from "../../components/profile-card";
 
 const MainPage = (): ReactElement => {
   return (
     <>
-      <ScrollComponent>
-        <main className="main-wrapper" data-scroll-section>
-          <div
+      <main className="main-wrapper">
+        {/* <div
             className="c-fixed_wrapper pt-10"
             data-scroll
             data-scroll-call="dynamicBackground"
@@ -60,8 +60,8 @@ const MainPage = (): ReactElement => {
               </section>
             </div>
           </div>
-          <hr />
-          <section className="techstacks-section h-screen" id="direction">
+          <hr /> */}
+        {/* <section className="techstacks-section h-screen" id="direction">
             <div className="fire-wrapper">
               <FireEffect />
             </div>
@@ -120,19 +120,11 @@ const MainPage = (): ReactElement => {
                 PROGRAMMING!!
               </span>
             </div>
-          </section>
-          <section
-            className="h-screen"
-            data-scroll
-            data-scroll-speed="2"
-          ></section>
-          <section
-            className="h-screen"
-            data-scroll
-            data-scroll-speed="3"
-          ></section>
-        </main>
-      </ScrollComponent>
+          </section> */}
+        <section className="intro-section h-screen" data-scroll data-scroll-speed="0">
+          <Intro />
+        </section>
+      </main>
     </>
   );
 };

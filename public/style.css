@@ -1,11 +1,9 @@
 html,
 body {
   position: relative;
-  height: 100%;
 }
 
 body {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
   margin: 0;
@@ -16,10 +14,12 @@ body {
 /* loading */
 
 #content-hidden{
-  visibility: hidden;
+  display: none;
 }
 
 .loading {
+  overflow: hidden;
+  background: wheat;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -14,7 +14,7 @@ const ScrollComponent = (props: ScrollComponentProps): ReactElement => {
 
   return (
     <div
-      className="page-wrapper pb-16 px-10"
+      className="page-wrapper"
       data-scroll-container
       ref={containerRef}
     >
