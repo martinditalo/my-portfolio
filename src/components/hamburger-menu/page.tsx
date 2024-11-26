@@ -1,18 +1,31 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 const Nav = () => {
+
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked);
-    console.log(isChecked);
   };
+
+  useEffect(() => {
+    const aboutContainer = document.querySelector(
+      ".about-container"
+    ) as HTMLElement;
+
+    if (aboutContainer !== null && isChecked) {
+      aboutContainer.style.display = "none";
+    } else if (aboutContainer !== null && isChecked === false) {
+      aboutContainer.style.display = "block";
+    }
+  }, [isChecked]);
 
   return (
     <>
       <div className={isChecked ? "overlay-open" : ""}>
-        <div className="absolute top-0 right-0 m-5">
+        <div className="fixed top-0 right-0 m-5 z-40">
           <input
             type="checkbox"
             id="checkbox"
@@ -30,15 +43,30 @@ const Nav = () => {
             Martin Ditalo
           </span>
           <div className="flex flex-col">
-            <a href="./" className="menu-text menu-text--leda px-3" data-text="Home">
+            <Link
+              to="/"
+              onClick={() => setIsChecked(false)}
+              className="menu-text menu-text--leda px-3"
+              data-text="Home"
+            >
               <span>Home</span>
-            </a>
-            <a href="./" className="menu-text menu-text--leda px-3" data-text="About">
+            </Link>
+            <Link
+              to="/about"
+              onClick={() => setIsChecked(false)}
+              className="menu-text menu-text--leda px-3"
+              data-text="About"
+            >
               <span>About</span>
-            </a>
-            <a href="./" className="menu-text menu-text--leda px-3" data-text="Projects">
+            </Link>
+            <Link
+              to="/projects"
+              onClick={() => setIsChecked(false)}
+              className="menu-text menu-text--leda px-3"
+              data-text="Projects"
+            >
               <span>Projects</span>
-            </a>
+            </Link>
           </div>
           <a href="https://github.com/martinditalo">
             <svg

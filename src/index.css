@@ -4,15 +4,36 @@
 
 body {
   margin: 0;
-  background-color: #1b1b1c;
   font-family: sans-serif;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.5;
+  background-color: #e3e3e3;
 }
 
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@font-face {
+  font-family: "KolkerBrush";
+  src: url("~/public/assets/fonts/KolkerBrush-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LondrinaSketch";
+  src: url("~/public/assets/fonts/LondrinaSketch-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("~/public/assets/fonts/Raleway-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
 }

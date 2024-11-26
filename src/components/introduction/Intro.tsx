@@ -1,7 +1,10 @@
 import { ReactElement, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import "./Intro.scss";
 
 const Intro = (): ReactElement => {
+  const location = useLocation();
+
   // Use refs instead of document.getElementById to ensure elements exist before use
   const text1Ref = useRef<HTMLSpanElement | null>(null);
   const text2Ref = useRef<HTMLSpanElement | null>(null);
@@ -25,7 +28,7 @@ const Intro = (): ReactElement => {
   let morph: number = 0;
   let cooldown: number = cooldownTime;
 
-  function doMorph() {
+  const doMorph = () => {
     morph -= cooldown;
     cooldown = 0;
 
@@ -37,9 +40,9 @@ const Intro = (): ReactElement => {
     }
 
     setMorph(fraction);
-  }
+  };
 
-  function setMorph(fraction: number) {
+  const setMorph = (fraction: number) => {
     if (text2Ref.current) {
       text2Ref.current.style.filter = `blur(${Math.min(
         8 / fraction - 8,
@@ -62,9 +65,9 @@ const Intro = (): ReactElement => {
       text1Ref.current.textContent = texts[textIndex % texts.length];
       text2Ref.current.textContent = texts[(textIndex + 1) % texts.length];
     }
-  }
+  };
 
-  function doCooldown() {
+  const doCooldown = () => {
     morph = 0;
 
     if (text2Ref.current) {
@@ -76,10 +79,10 @@ const Intro = (): ReactElement => {
       text1Ref.current.style.filter = "";
       text1Ref.current.style.opacity = "0%";
     }
-  }
+  };
 
   // Animation loop
-  function animate() {
+  const animate = () => {
     requestAnimationFrame(animate);
 
     const newTime: number = new Date().getTime();
@@ -98,18 +101,17 @@ const Intro = (): ReactElement => {
     } else {
       doCooldown();
     }
-  }
+  };
 
   // Start animation when component is mounted
   useEffect(() => {
     if (text1Ref.current && text2Ref.current) {
       text1Ref.current.textContent = texts[textIndex % texts.length];
       text2Ref.current.textContent = texts[(textIndex + 1) % texts.length];
-      setTimeout(() => {
-        animate();
-      }, 3900);
+      animate();
     }
-  });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location]);
 
   return (
     <>

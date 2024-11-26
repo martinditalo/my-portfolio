@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
-
 body {
     margin: 0px;
 }
@@ -21,15 +19,12 @@ body {
 #text1,
 #text2 {
     font-size: clamp(1rem, 6vw + 1rem, 44rem);
-    
+
     color: #000;
     position: absolute;
     width: 100%;
     display: inline-block;
-
     font-family: "Raleway", sans-serif;
-
     text-align: center;
-
     user-select: none;
 }

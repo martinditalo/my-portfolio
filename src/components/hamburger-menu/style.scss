@@ -3,7 +3,7 @@
 }
 
 .toggle {
-  z-index: 51;
+  z-index: 31;
   position: relative;
   width: 40px;
   cursor: pointer;
@@ -17,7 +17,7 @@
   right: 0;
   height: 4px;
   border-radius: calc(4px / 2);
-  background: #a79774;
+  background: #8f8e8d;
   color: inherit;
   opacity: 1;
   transition: none 0.35s cubic-bezier(0.5, -0.35, 0.35, 1.5) 0s;
@@ -67,7 +67,7 @@
 }
 
 .page-overlay {
-  background-color: antiquewhite;
+  background-color: #dbdbdb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,7 +83,7 @@
   left: 0;
   width: 100%;
   overflow: auto;
-  z-index: 50;
+  z-index: 30;
   -webkit-clip-path: inset(0% 0% 100% 0%);
   clip-path: inset(0% 0% 100% 0%);
   -webkit-transition: 0.7s -webkit-clip-path ease-in-out;
@@ -150,6 +150,7 @@
 
 .menu-text--leda:hover::after {
   transform: translate3d(0, 0, 0);
+  font-style: italic;
 }
 
 .menu-text--leda span {

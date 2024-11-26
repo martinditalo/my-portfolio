@@ -1,0 +1,138 @@
+.loading {
+    overflow: hidden;
+    background: #e3e3e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2em;
+  }
+  
+  .motorWrapper {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    width: 800px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    overflow-x: hidden;
+    overflow: hidden;
+  }
+  
+  @media (min-width: 1200px) {
+    .motorWrapper {
+      transform: scale(1.2); /* Scale up for large screens (desktops) */
+    }
+  }
+  
+  /* Scale for tablets and medium screens */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .motorWrapper {
+      transform: scale(1); /* Slightly scale up for tablets and medium screens */
+    }
+  }
+  
+  /* Default scale for mobile screens */
+  @media (max-width: 767px) {
+    .motorWrapper {
+      transform: scale(0.8); /* No scaling for smaller screens (mobile) */
+    }
+  }
+  
+  /* Optional: Apply a smaller scale for very small mobile screens */
+  @media (max-width: 480px) {
+    .motorWrapper {
+      transform: scale(0.6); /* Scale down for very small mobile screens */
+    }
+  }
+  
+  .motorcycle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: motion 4s linear infinite;
+    transform: scaleX(-1);
+  }
+  
+  .road {
+    width: 100%;
+    height: 1.5px;
+    background-color: #282828;
+    position: relative;
+    bottom: 0;
+    align-self: flex-end;
+    border-radius: 3px;
+  }
+  .road::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background-color: #282828;
+    right: -50%;
+    border-radius: 3px;
+    animation: roadAnimation 1.4s linear infinite;
+  }
+  .road::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background-color: #282828;
+    right: -65%;
+    border-radius: 3px;
+    animation: roadAnimation 1.4s linear infinite;
+  }
+  
+  .lampPost {
+    position: absolute;
+    bottom: 0;
+    right: -90%;
+    height: 90px;
+    animation: roadAnimation 4s linear infinite;
+  }
+  
+  .tree {
+    position: absolute;
+    bottom: -10px;
+    right: -10%;
+    height: 90px;
+    animation: roadAnimation 4s linear infinite;
+  }
+  
+  @keyframes roadAnimation {
+    0% {
+      transform: translateX(-1800px);
+    }
+    20% {
+      transform: translateX(-1200px);
+    }
+    80% {
+      transform: translateX(-800px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  
+  @keyframes motion {
+    0% {
+      transform: translateY(2px) translateX(0px);
+    }
+    10% {
+      transform: translateY(2px) translateX(-100px);
+    }
+    80% {
+      transform: translateY(2px) translateX(-200px);
+    }
+    90% {
+      transform: translateY(2px) translateX(-300px);
+    }
+    100% {
+      transform: translateY(2px) translateX(-750px);
+    }
+  }
+  

@@ -1,7 +1,7 @@
 .page-wrapper {
-  background: #e3e3e3;
+  height: 8651px !important;
+  width: 100%;
 }
-
 
 
 h1 {
@@ -14,7 +14,10 @@ h1 {
   height: 100vh;
   
 }
-
+.c-scrollbar{
+  height: 100vh !important;
+}
 .c-scrollbar_thumb {
-  background: #ef6817 !important;
+  background: #7a7977 !important;
+  height: 100px !important;
 }
