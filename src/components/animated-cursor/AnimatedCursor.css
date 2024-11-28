@@ -12,16 +12,7 @@
 .animated-cursor.clicked {
   transform: scale(0.25); /* Scale up on click */
   .cube {
-    animation: spin 1.5s infinite linear;
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-  }
-  100% {
-    transform: rotateX(0) rotateY(0) rotateZ(0);
+    animation: rotate 2s infinite alternate-reverse;
   }
 }
 

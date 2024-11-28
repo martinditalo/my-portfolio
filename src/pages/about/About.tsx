@@ -1,43 +1,49 @@
-import { ReactElement, useEffect, useState } from "react";
-import { ScrollComponent } from "../../components/scroll-pages";
+import { ReactElement, useEffect, useRef, useState } from "react";
+import { Experience } from "./experience";
 import "./About.scss";
-type Option = "one" | "two" | "three";
-const About = (): ReactElement => {
-  const [selected, setSelected] = useState<Option>("one");
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(event.target.value as Option);
+const About = (): ReactElement => {
+  const div1Ref = useRef<HTMLDivElement>(null);
+  const div2Ref = useRef<HTMLDivElement>(null);
+  const div3Ref = useRef<HTMLDivElement>(null);
+
+  const [selected, setSelected] = useState<string>("showDiv1");
+
+  const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const targetId = e.target.id;
+    setSelected(targetId);
+    if (targetId === "showDiv1" && div1Ref.current) {
+      div1Ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else if (targetId === "showDiv2" && div2Ref.current) {
+      div2Ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else if (targetId === "showDiv3" && div3Ref.current) {
+      div3Ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  const checkInView = () => {
+    if (div1Ref.current && div2Ref.current && div3Ref.current) {
+      const div1InView = isInViewport(div1Ref.current);
+      const div2InView = isInViewport(div2Ref.current);
+      const div3InView = isInViewport(div3Ref.current);
+
+      if (div1InView) setSelected("showDiv1");
+      else if (div2InView) setSelected("showDiv2");
+      else if (div3InView) setSelected("showDiv3");
+    }
+  };
+
+  const isInViewport = (el: HTMLElement) => {
+    const rect = el.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= window.innerHeight;
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id;
-            if (id === "about-container") {
-              setSelected("one");
-            } else if (id === "experience-container") {
-              setSelected("two");
-            } else if (id === "projects-container") {
-              setSelected("three");
-            }
-          }
-        });
-      },
-      { threshold: 0.5 } // This means the section needs to be at least 50% visible
-    );
-
-    // Target the sections to observe
-    const sections = document.querySelectorAll("[data-scroll-section]");
-    sections.forEach((section) => observer.observe(section));
-    console.log(selected, 'test')
-    // Cleanup on component unmount
+    window.addEventListener("scroll", checkInView);
     return () => {
-      sections.forEach((section) => observer.unobserve(section));
+      window.removeEventListener("scroll", checkInView);
     };
-    
-  }, [selected]);
+  }, []);
   return (
     <>
       <div className="about-container mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
@@ -64,18 +70,17 @@ const About = (): ReactElement => {
                       <input
                         className="choice-circle"
                         type="radio"
-                        value="one"
-                        name="number-selector"
-                        id="one"
-                        checked={selected === "one"}
-                        onChange={handleChange}
+                        name="option"
+                        id="showDiv1"
+                        value="1"
+                        checked={selected === "showDiv1"}
+                        onChange={handleRadioChange}
                       />
                       <div className="ball"></div>
                     </div>
                     <label
-                      htmlFor="one"
                       className={
-                        selected === "one"
+                        selected === "showDiv1"
                           ? "choice-name choice-name-active"
                           : "choice-name"
                       }
@@ -88,18 +93,17 @@ const About = (): ReactElement => {
                       <input
                         className="choice-circle"
                         type="radio"
-                        value="two"
-                        name="number-selector"
-                        id="two"
-                        checked={selected === "two"}
-                        onChange={handleChange}
+                        name="option"
+                        id="showDiv2"
+                        value="2"
+                        checked={selected === "showDiv2"}
+                        onChange={handleRadioChange}
                       />
                       <div className="ball"></div>
                     </div>
                     <label
-                      htmlFor="two"
                       className={
-                        selected === "two"
+                        selected === "showDiv2"
                           ? "choice-name choice-name-active"
                           : "choice-name"
                       }
@@ -112,18 +116,17 @@ const About = (): ReactElement => {
                       <input
                         className="choice-circle"
                         type="radio"
-                        value="three"
-                        name="number-selector"
-                        id="three"
-                        checked={selected === "three"}
-                        onChange={handleChange}
+                        name="option"
+                        id="showDiv3"
+                        value="3"
+                        checked={selected === "showDiv3"}
+                        onChange={handleRadioChange}
                       />
                       <div className="ball"></div>
                     </div>
                     <label
-                      htmlFor="three"
                       className={
-                        selected === "three"
+                        selected === "showDiv3"
                           ? "choice-name choice-name-active"
                           : "choice-name"
                       }
@@ -200,218 +203,61 @@ const About = (): ReactElement => {
               </li>
             </ul>
           </header>
-          <ScrollComponent>
-            <div
-              className="pt-24 lg:w-full lg:py-24 w-full h-full
-              "
-              data-scroll-section
+          <div
+            className="pt-5 lg:w-full lg:py-24 w-full h-full"
+            data-scroll-section
+          >
+            <section
+              id="about-container"
+              ref={div1Ref}
+              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-10 lg:scroll-mt-24 lg:p-5"
             >
-              <section
-                id="about-container"
-                className="mb-16 scroll-mt-16 md:mb-24 lg:mb-10 lg:scroll-mt-24 lg:p-5"
-              >
-                <p className="about-text mb-5">
-                  As a Front End Engineer, specializing in creating responsive
-                  and user-friendly web applications. My technical skills
-                  include HTML, CSS, SCSS, JavaScript, and frameworks such as
-                  React, Vue.js, Nuxt, which I use to build dynamic and scalable
-                  solutions. I focus on writing clean, maintainable code
-                </p>
-                <p className="about-text mb-5">
-                  I am currently working as a Software Engineer at&nbsp;
-                  <a
-                    href="https://galaticevents.com/"
-                    className="text-gray-500/50 hover:text-slate-100 from-neutral-500"
-                  >
-                    Galactic Events Corporation
-                  </a>
-                  , My primary responsibility is front-end development, where I
-                  work extensively with Vue.js and the Nuxt.js framework to
-                  build dynamic, high-performance web applications. My work
-                  involves designing and implementing user-friendly interfaces,
-                  optimizing performance, and ensuring seamless integration with
-                  backend services.
-                </p>
-                <p className="about-text mb-5">
-                  Collaboration and continuous learning are essential to my
-                  approach. I thrive in agile environments, working alongside
-                  back-end developers, designers, and product managers to bring
-                  ideas to life. By staying up to date with the latest industry
-                  trends and best practices, I aim to deliver innovative
-                  solutions that meet both business goals and user needs.
-                </p>
-              </section>
-              <section
-                id="experience-container"
-                className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-                aria-label="Work experience"
-              >
-                <div>
-                  <ol className="group/list">
-                    <li className="mb-12">
-                      <div className="group relative flex flex-col pb-1 transition- lg:hover:!opacity-100 lg:group-hover/list:opacity-50 lg:p-5">
-                        <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-white/45 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                        <header
-                          className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-600 sm:col-span-2"
-                          aria-label="2024 to Present"
-                        >
-                          July 2024 — Present
-                        </header>
-                        <div className="z-10 sm:col-span-6">
-                          <h3 className="font-medium leading-snug">
-                            <div>
-                              <a
-                                className="inline-flex items-baseline font-medium leading-tight text-gray-500 hover:text-gray-800 group/link text-base"
-                                href="https://galaticevents.com/"
-                                target="_blank"
-                                rel="noreferrer noopener"
-                                aria-label="Senior Frontend Engineer, Accessibility at Klaviyo (opens in a new tab)"
-                              >
-                                <span className="absolute  hidden rounded  lg:block"></span>
-                                <span>
-                                  Software Engineer - Galactic Event Corporation
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                    className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
-                                    aria-hidden="true"
-                                  >
-                                    <path
-                                      fill-rule="evenodd"
-                                      d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                                      clip-rule="evenodd"
-                                    ></path>
-                                  </svg>
-                                </span>
-                              </a>
-                            </div>
-                          </h3>
-                          <p className="mt-2 text-sm leading-normal">
-                            Build and maintain critical components used to
-                            construct Klaviyo’s frontend, across the whole
-                            product. Work closely with cross-functional teams,
-                            including developers, designers, and product
-                            managers, to implement and advocate for best
-                            practices in web accessibility.
-                          </p>
-                          <ul className="mt-2 flex flex-wrap">
-                            <li className="mr-1.5 mt-2">
-                              <div className="flex items-center rounded-full bg-gray-400/50 px-3 py-1 text-xs font-medium text-slate-800 leading-5">
-                                Vue
-                              </div>
-                            </li>
-                            <li className="mr-1.5 mt-2">
-                              <div className="flex items-center rounded-full bg-gray-400/50 px-3 py-1 text-xs font-medium leading-5 text-slate-800 ">
-                                Nuxt
-                              </div>
-                            </li>
-                            <li className="mr-1.5 mt-2">
-                              <div className="flex items-center rounded-full bg-gray-400/50 px-3 py-1 text-xs font-medium leading-5 text-slate-800">
-                                JavaScript
-                              </div>
-                            </li>
-                            <li className="mr-1.5 mt-2">
-                              <div className="flex items-center rounded-full bg-gray-400/50  px-3 py-1 text-xs font-medium leading-5 text-slate-800">
-                                Storybook
-                              </div>
-                            </li>
-                            <li className="mr-1.5 mt-2">
-                              <div className="flex items-center rounded-full bg-gray-400/50 px-3 py-1 text-xs font-medium leading-5 text-slate-800">
-                                Quasar
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="mb-12">
-                      <div className="group relative flex flex-col pb-1 transition- lg:hover:!opacity-100 lg:group-hover/list:opacity-50 lg:p-5 rounded">
-                        <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-white/45 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                        <header
-                          className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
-                          aria-label="2024 to Present"
-                        >
-                          March 2022 — March 2024
-                        </header>
-                        <div className="z-10 sm:col-span-6">
-                          <h3 className="font-medium leading-snug">
-                            <div>
-                              <a
-                                className="inline-flex items-baseline font-medium leading-tight text-gray-500 hover:text-gray-800  group/link text-base"
-                                href="https://www.lpstech.com/site/en/home"
-                                target="_blank"
-                                rel="noreferrer noopener"
-                                aria-label="Senior Frontend Engineer, Accessibility at Klaviyo (opens in a new tab)"
-                              >
-                                <span className="absolute  hidden rounded  lg:block"></span>
-                                <span>
-                                  Solution Developer (React JS) - LPS
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                    className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
-                                    aria-hidden="true"
-                                  >
-                                    <path
-                                      fill-rule="evenodd"
-                                      d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                                      clip-rule="evenodd"
-                                    ></path>
-                                  </svg>
-                                </span>
-                              </a>
-                            </div>
-                          </h3>
-                          <p className="mt-2 text-sm leading-normal">
-                            Build and maintain critical components used to
-                            construct Klaviyo’s frontend, across the whole
-                            product. Work closely with cross-functional teams,
-                            including developers, designers, and product
-                            managers, to implement and advocate for best
-                            practices in web accessibility.
-                          </p>
-                          <ul className="mt-2 flex flex-wrap">
-                            <li className="mr-1.5 mt-2">
-                              <div className="flex items-center rounded-full bg-gray-400/50 px-3  py-1 text-xs font-medium text-slate-800 leading-5">
-                                React
-                              </div>
-                            </li>
-                            <li className="mr-1.5 mt-2">
-                              <div className="flex items-center rounded-full bg-gray-400/50 px-3 py-1 text-xs font-medium leading-5 text-slate-800 ">
-                                React Query
-                              </div>
-                            </li>
-                            <li className="mr-1.5 mt-2">
-                              <div className="flex items-center rounded-full bg-gray-400/50 px-3 py-1 text-xs font-medium leading-5 text-slate-800">
-                                MUI
-                              </div>
-                            </li>
-                            <li className="mr-1.5 mt-2">
-                              <div className="flex items-center rounded-full bg-gray-400/50 px-3 py-1 text-xs font-medium leading-5 text-slate-800">
-                                Jest
-                              </div>
-                            </li>
-                            <li className="mr-1.5 mt-2">
-                              <div className="flex items-center rounded-full bg-gray-400/50 px-3 py-1 text-xs font-medium leading-5 text-slate-800">
-                                Formik
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                  </ol>
-                </div>
-              </section>
-              <section
-                id="projects-container"
-                className="h-screen"
-              >
-              </section>
-            </div>
-          </ScrollComponent>
+              <p className="about-text mb-5">
+                As a Front End Engineer, specializing in creating responsive and
+                user-friendly web applications. My technical skills include
+                HTML, CSS, SCSS, JavaScript, and frameworks such as React,
+                Vue.js, Nuxt, which I use to build dynamic and scalable
+                solutions. I focus on writing clean, maintainable code
+              </p>
+              <p className="about-text mb-5">
+                I am currently working as a Software Engineer at&nbsp;
+                <a
+                  href="https://galaticevents.com/"
+                  className="text-gray-500/50 hover:text-slate-100 from-neutral-500"
+                >
+                  Galactic Events Corporation
+                </a>
+                , My primary responsibility is front-end development, where I
+                work extensively with Vue.js and the Nuxt.js framework to build
+                dynamic, high-performance web applications. My work involves
+                designing and implementing user-friendly interfaces, optimizing
+                performance, and ensuring seamless integration with backend
+                services.
+              </p>
+              <p className="about-text mb-5">
+                Collaboration and continuous learning are essential to my
+                approach. I thrive in agile environments, working alongside
+                back-end developers, designers, and product managers to bring
+                ideas to life. By staying up to date with the latest industry
+                trends and best practices, I aim to deliver innovative solutions
+                that meet both business goals and user needs.
+              </p>
+            </section>
+            <section
+              ref={div2Ref}
+              id="experience-container"
+              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+              aria-label="Work experience"
+            >
+              <Experience />
+            </section>
+
+            <section
+              ref={div3Ref}
+              id="projects-container"
+              className="h-screen"
+            ></section>
+          </div>
         </div>
       </div>
     </>
