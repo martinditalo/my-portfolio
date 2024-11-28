@@ -1,5 +1,6 @@
 import { ReactElement, useEffect, useRef, useState } from "react";
 import { Experience } from "./experience";
+import { Projects } from "./projects";
 import "./About.scss";
 
 const About = (): ReactElement => {
@@ -53,14 +54,14 @@ const About = (): ReactElement => {
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
                 <a href="/">Martin Ditalo</a>
               </h1>
-              <h2 className="mt-3 text-lg font-medium tracking-tight  sm:text-xl">
-                Front End Engineer
+              <h2 className="mt-3 text-xs font-medium tracking-tight  sm:text-base">
+                Front End Developer/Web Developer
               </h2>
-              <p className="mt-4 max-w-xs leading-normal">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
-                et doloribus saepe aperiam.
+              <p className="mt-4 max-w-xs leading-normal font-mandali">
+                I create web experiences that are clear, user-friendly, and
+                thoughtfully designed.
               </p>
-              <div className="radio-input hidden lg:flex">
+              <div className="radio-input hidden lg:flex font-mandali">
                 <div className="glass">
                   <div className="glass-inner"></div>
                 </div>
@@ -210,38 +211,45 @@ const About = (): ReactElement => {
             <section
               id="about-container"
               ref={div1Ref}
-              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-10 lg:scroll-mt-24 lg:p-5"
+              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-5 lg:scroll-mt-24 lg:p-3"
             >
-              <p className="about-text mb-5">
-                As a Front End Engineer, specializing in creating responsive and
-                user-friendly web applications. My technical skills include
-                HTML, CSS, SCSS, JavaScript, and frameworks such as React,
-                Vue.js, Nuxt, which I use to build dynamic and scalable
-                solutions. I focus on writing clean, maintainable code
-              </p>
-              <p className="about-text mb-5">
-                I am currently working as a Software Engineer at&nbsp;
-                <a
-                  href="https://galaticevents.com/"
-                  className="text-gray-500/50 hover:text-slate-100 from-neutral-500"
-                >
-                  Galactic Events Corporation
-                </a>
-                , My primary responsibility is front-end development, where I
-                work extensively with Vue.js and the Nuxt.js framework to build
-                dynamic, high-performance web applications. My work involves
-                designing and implementing user-friendly interfaces, optimizing
-                performance, and ensuring seamless integration with backend
-                services.
-              </p>
-              <p className="about-text mb-5">
-                Collaboration and continuous learning are essential to my
-                approach. I thrive in agile environments, working alongside
-                back-end developers, designers, and product managers to bring
-                ideas to life. By staying up to date with the latest industry
-                trends and best practices, I aim to deliver innovative solutions
-                that meet both business goals and user needs.
-              </p>
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-gray-700/65 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
+                  About
+                </h2>
+              </div>
+              <div>
+                <p className="about-text mb-5">
+                  As a Front End Engineer, specializing in creating responsive
+                  and user-friendly web applications. My technical skills
+                  include HTML, CSS, SCSS, JavaScript, and frameworks such as
+                  React, Vue.js, Nuxt, which I use to build dynamic and scalable
+                  solutions. I focus on writing clean, maintainable code
+                </p>
+                <p className="about-text mb-5">
+                  I am currently working as a Software Engineer at&nbsp;
+                  <a
+                    href="https://galaticevents.com/"
+                    className="text-gray-500/50 hover:text-slate-100 from-neutral-500 font-bold"
+                  >
+                    Galactic Events Corporation
+                  </a>
+                  , My primary responsibility is front-end development, where I
+                  work extensively with Vue.js and the Nuxt.js framework to
+                  build dynamic, high-performance web applications. My work
+                  involves designing and implementing user-friendly interfaces,
+                  optimizing performance, and ensuring seamless integration with
+                  backend services.
+                </p>
+                <p className="about-text mb-5">
+                  Collaboration and continuous learning are essential to my
+                  approach. I thrive in agile environments, working alongside
+                  back-end developers, designers, and product managers to bring
+                  ideas to life. By staying up to date with the latest industry
+                  trends and best practices, I aim to deliver innovative
+                  solutions that meet both business goals and user needs.
+                </p>
+              </div>
             </section>
             <section
               ref={div2Ref}
@@ -249,14 +257,26 @@ const About = (): ReactElement => {
               className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
               aria-label="Work experience"
             >
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-gray-700/65 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
+                  Experience
+                </h2>
+              </div>
               <Experience />
             </section>
 
             <section
               ref={div3Ref}
               id="projects-container"
-              className="h-screen"
-            ></section>
+              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+            >
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-gray-700/65 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
+                  Projects
+                </h2>
+              </div>
+              <Projects />
+            </section>
           </div>
         </div>
       </div>

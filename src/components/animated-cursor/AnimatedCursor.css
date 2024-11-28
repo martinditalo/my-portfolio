@@ -23,7 +23,7 @@
   width: 650px;
   height: 650px;
   border-radius: 100%;
-  background-image: linear-gradient(#555555 10%, white);
+  background-image: linear-gradient(#777777 10%, #fff);
   filter: blur(250px);
   transition: all 400ms ease-out;
   position: fixed;
