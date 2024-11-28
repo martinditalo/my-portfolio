@@ -60,12 +60,12 @@ const Nav = () => {
               <span>About</span>
             </Link>
             <Link
-              to="/projects"
+              to="/contact"
               onClick={() => setIsChecked(false)}
               className="menu-text menu-text--leda px-3"
-              data-text="Projects"
+              data-text="Contact"
             >
-              <span>Projects</span>
+              <span>Contact</span>
             </Link>
           </div>
           <a href="https://github.com/martinditalo">

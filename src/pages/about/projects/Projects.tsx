@@ -6,7 +6,7 @@ const Projects = (): ReactElement => {
       projects: {
         link: "",
         title: "Project 1",
-        img: "https://www.svgrepo.com/show/508699/landscape-placeholder.svg",
+        img: "https://icons.veryicon.com/png/System/Oxygen/places%20folder%20grey.png",
         description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, natus aspernatur. Non maiores sunt tenetur officiis, cupiditate nam eligendi ratione commodi nemo vel explicabo soluta veritatis consequuntur hic iusto placeat!`,
         stacks: [],
       },
@@ -15,7 +15,7 @@ const Projects = (): ReactElement => {
       projects: {
         link: "",
         title: "Project 2",
-        img: "https://www.svgrepo.com/show/508699/landscape-placeholder.svg",
+        img: "https://icons.veryicon.com/png/System/Oxygen/places%20folder%20grey.png",
         description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, natus aspernatur. Non maiores sunt tenetur officiis, cupiditate nam eligendi ratione commodi nemo vel explicabo soluta veritatis consequuntur hic iusto placeat!`,
         stacks: [],
       },
@@ -24,7 +24,7 @@ const Projects = (): ReactElement => {
       projects: {
         link: "",
         title: "Project 3",
-        img: "https://www.svgrepo.com/show/508699/landscape-placeholder.svg",
+        img: "https://icons.veryicon.com/png/System/Oxygen/places%20folder%20grey.png",
         description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, natus aspernatur. Non maiores sunt tenetur officiis, cupiditate nam eligendi ratione commodi nemo vel explicabo soluta veritatis consequuntur hic iusto placeat!`,
         stacks: ["PHP", "Laravel", "Javascript", "Bootstrap", "MySQL"],
       },
