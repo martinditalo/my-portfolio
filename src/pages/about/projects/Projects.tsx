@@ -22,11 +22,11 @@ const Projects = (): ReactElement => {
     },
     {
       projects: {
-        link: "",
-        title: "Project 3",
-        img: "https://icons.veryicon.com/png/System/Oxygen/places%20folder%20grey.png",
-        description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, natus aspernatur. Non maiores sunt tenetur officiis, cupiditate nam eligendi ratione commodi nemo vel explicabo soluta veritatis consequuntur hic iusto placeat!`,
-        stacks: ["PHP", "Laravel", "Javascript", "Bootstrap", "MySQL"],
+        link: "https://github.com/R2ZTracker",
+        title: "R2Z Tracker",
+        img: "/assets/images/project-img/R2Z_Tracker.png",
+        description: `R2Z Tracker is a COVID-19 case tracking system for barangays in Olongapo City, built with Ionic Angular for the front-end and a PHP MySQL REST API for the back-end. It provides real-time case updates to help local officials and residents stay informed. The project aims to support efficient pandemic response at the barangay level.`,
+        stacks: ["Ionic", "Angular", "Bootstrap", "MySQL", "PHP", "NPM"],
       },
     },
   ];
@@ -44,7 +44,7 @@ const Projects = (): ReactElement => {
                       <div>
                         <a
                           className="inline-flex items-baseline font-medium leading-tight text-gray-500 hover:text-gray-800 group/link text-base"
-                          href="/"
+                          href={data.projects.link}
                         >
                           <span className="absolute  hidden rounded  lg:block"></span>
                           <span className="text-sm">
@@ -83,11 +83,11 @@ const Projects = (): ReactElement => {
                   <img
                     alt=""
                     loading="lazy"
-                    width="200"
+                    width="130"
                     height="48"
                     decoding="async"
                     data-nimg="1"
-                    className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
+                    className="rounded ml-3 border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 lg:col-span-2 sm:translate-y-1 filter grayscale blur-[1.3px] hover:filter-none"
                     src={data.projects.img}
                   />
                 </div>
