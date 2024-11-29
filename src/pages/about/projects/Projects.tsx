@@ -13,7 +13,7 @@ const Projects = (): ReactElement => {
     },
     {
       projects: {
-        link: "https://martinditalo.vercel.app/",
+        link: "https://github.com/martinditalo/my-portfolio",
         title: "martinditalo.vercel.app",
         img: "/assets/images/project-img/portfolio.png",
         description: `Explore my work and professional experience through the interactive features of my portfolio, built with React, TypeScript, and Tailwind CSS for a fast, responsive experience. React and TypeScript ensure scalability and maintainability, while Tailwind CSS enables clean, customizable styling.`,
