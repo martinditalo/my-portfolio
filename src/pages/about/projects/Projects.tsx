@@ -4,17 +4,8 @@ const Projects = (): ReactElement => {
   const ProjectsData = [
     {
       projects: {
-        link: "",
-        title: "Project 1",
-        img: "https://icons.veryicon.com/png/System/Oxygen/places%20folder%20grey.png",
-        description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, natus aspernatur. Non maiores sunt tenetur officiis, cupiditate nam eligendi ratione commodi nemo vel explicabo soluta veritatis consequuntur hic iusto placeat!`,
-        stacks: [],
-      },
-    },
-    {
-      projects: {
         link: "https://github.com/martinditalo/my-portfolio",
-        title: "martinditalo.vercel.app",
+        title: "My Portfolio",
         img: "/assets/images/project-img/portfolio.png",
         description: `Explore my work and professional experience through the interactive features of my portfolio, built with React, TypeScript, and Tailwind CSS for a fast, responsive experience. React and TypeScript ensure scalability and maintainability, while Tailwind CSS enables clean, customizable styling.`,
         stacks: ["React", "Tailwind", "SCSS", "Typescript", "Javascript"],
@@ -27,6 +18,15 @@ const Projects = (): ReactElement => {
         img: "/assets/images/project-img/R2Z.png",
         description: `R2Z Tracker is a COVID-19 case tracking system for barangays in Olongapo City, built with Ionic Angular for the front-end and a PHP MySQL REST API for the back-end. It provides real-time case updates to help local officials and residents stay informed. The project aims to support efficient pandemic response at the barangay level.`,
         stacks: ["Ionic", "Angular", "Bootstrap", "MySQL", "PHP", "NPM"],
+      },
+    },
+    {
+      projects: {
+        link: "",
+        title: "Project 1",
+        img: "https://icons.veryicon.com/png/System/Oxygen/places%20folder%20grey.png",
+        description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, natus aspernatur. Non maiores sunt tenetur officiis, cupiditate nam eligendi ratione commodi nemo vel explicabo soluta veritatis consequuntur hic iusto placeat!`,
+        stacks: [],
       },
     },
   ];
@@ -87,7 +87,7 @@ const Projects = (): ReactElement => {
                     height="48"
                     decoding="async"
                     data-nimg="1"
-                    className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-800/30 sm:order-1 sm:col-span-2 sm:translate-y-1 filter grayscale blur-[1px] hover:filter-none"
+                    className="rounded sm:order-1 sm:col-span-2 sm:translate-y-1 filter grayscale blur-[1px] hover:filter-none"
                     src={data.projects.img}
                   />
                 </div>
