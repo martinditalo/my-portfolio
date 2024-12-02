@@ -31,7 +31,7 @@ body {
 
 
 
-.intor-background {
+.intro-background {
     width: 100vw;
     height: 100vh;
     background: #e3e3e3;
@@ -43,7 +43,7 @@ $particleSize: 25vmin;
 $animationDuration: 6s;
 $amount: 20;
 
-.intor-background span {
+.intro-background span {
     width: $particleSize;
     height: $particleSize;
     border-radius: $particleSize;

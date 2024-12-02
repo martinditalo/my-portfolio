@@ -114,7 +114,7 @@ const Intro = (): ReactElement => {
 
   return (
     <>
-      <div className="intor-background">
+      <div className="intro-background">
         <span></span>
         <span></span>
         <span></span>
