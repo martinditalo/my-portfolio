@@ -16,7 +16,7 @@ const Intro = (): ReactElement => {
     "Web Developer",
     "Software Engineer",
     "Front End Developer",
-    "Nice to meet you!"
+    "Nice to meet you!",
   ];
 
   const morphTime: number = 1;
@@ -109,11 +109,33 @@ const Intro = (): ReactElement => {
       text2Ref.current.textContent = texts[(textIndex + 1) % texts.length];
       animate();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
 
   return (
     <>
+      <div className="intor-background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div id="intro-container">
         <span id="text1" ref={text1Ref}></span>
         <span id="text2" ref={text2Ref}></span>
