@@ -70,7 +70,7 @@ const Nav = () => {
           </div>
           <a href="https://github.com/martinditalo">
             <svg
-              className="m-5 bottom-0 left-0 absolute"
+              className="github-icon m-5 bottom-0 left-0 absolute"
               xmlns="http://www.w3.org/2000/svg"
               width="45"
               height="45"
@@ -84,7 +84,7 @@ const Nav = () => {
           </a>
           <a href="https://www.linkedin.com/in/martin-ditalo-9a9244209/">
             <svg
-              className="m-5 bottom-0 right-0 absolute"
+              className="linkedIn-icon m-5 bottom-0 right-0 absolute"
               xmlns="http://www.w3.org/2000/svg"
               width="45"
               height="45"
