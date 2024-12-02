@@ -39,14 +39,16 @@
 
 /* Default scale for mobile screens */
 @media (max-width: 767px) {
-  .motorWrapper {
+  .motorWrapper.hamburger-menu {
     transform: scale(0.8);
   }
 }
 
 /* Optional: Apply a smaller scale for very small mobile screens */
 @media (max-width: 480px) {
-  .motorWrapper {
+
+  .motorWrapper,
+  .hamburger-menu {
     transform: scale(0.6);
   }
 }

@@ -16,8 +16,7 @@ const Intro = (): ReactElement => {
     "Web Developer",
     "Software Engineer",
     "Front End Developer",
-    "Nice to meet you!",
-    ">_<",
+    "Nice to meet you!"
   ];
 
   const morphTime: number = 1;

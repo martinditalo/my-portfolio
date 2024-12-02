@@ -51,7 +51,7 @@ const AnimatedCursor = () => {
 
   return (
     <>
-      <div ref={cursorRef} className="blob"></div>
+      <div ref={cursorRef} className="mouse"></div>
       <div
         className={`animated-cursor ${isHovered ? "hovered" : ""} ${
           isClicked ? "clicked" : ""

@@ -25,7 +25,7 @@ const Nav = () => {
   return (
     <>
       <div className={isChecked ? "overlay-open" : ""}>
-        <div className="fixed top-0 right-0 m-3 lg:m-5 z-40">
+        <div className="hamburger-menu fixed top-0 right-0 m-3 lg:m-5 z-40">
           <input
             type="checkbox"
             id="checkbox"
