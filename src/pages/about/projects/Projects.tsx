@@ -24,7 +24,7 @@ const Projects = (): ReactElement => {
       projects: {
         link: "https://github.com/Hospital-Billing-System",
         title: "Hospital Billing System (Academic - 3rd Year)",
-        img: "/assets/images/project-img/Hospital_billing_system.png",
+        img: "/assets/images/project-img/hospital_billing_system.png",
         description: "During my academic years, I developed a Hospital Billing System using Java and SQL to streamline billing for doctors, receptionists, and patients. It automated bill generation, tracked patient visits, and managed doctor fees, with data stored and queried through SQL. This system improved efficiency and ensured accurate, transparent billing.",
         stacks: ["Java", "JFrame", "SQL"],
       },
