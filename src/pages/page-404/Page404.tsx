@@ -4,7 +4,7 @@ import "./Page404.scss";
 const Page404 = (): ReactElement => {
   return (
     <>
-      <div className="flex h-screen justify-center items-center">
+      <div className="flex h-screen justify-center items-center overflow-hidden">
         <div className="ant-container">
           <h1 className="text-2xl lg:text-4xl">404 Page not found</h1>
           <svg
