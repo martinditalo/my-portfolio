@@ -14,7 +14,7 @@ const Projects = (): ReactElement => {
     {
       projects: {
         link: "https://github.com/R2ZTracker",
-        title: "R2Z Tracker (Capstone)",
+        title: "R2Z Tracker (Academic - Capstone)",
         img: "/assets/images/project-img/R2Z.png",
         description: `R2Z Tracker is a COVID-19 case tracking system for barangays in Olongapo City, built with Ionic Angular for the front-end and a PHP MySQL REST API for the back-end. It provides real-time case updates to help local officials and residents stay informed. The project aims to support efficient pandemic response at the barangay level.`,
         stacks: ["Ionic", "Angular", "Bootstrap", "MySQL", "PHP", "NPM"],
@@ -22,11 +22,11 @@ const Projects = (): ReactElement => {
     },
     {
       projects: {
-        link: "",
-        title: "Project 1",
-        img: "https://icons.veryicon.com/png/System/Oxygen/places%20folder%20grey.png",
-        description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, natus aspernatur. Non maiores sunt tenetur officiis, cupiditate nam eligendi ratione commodi nemo vel explicabo soluta veritatis consequuntur hic iusto placeat!`,
-        stacks: [],
+        link: "https://github.com/Hospital-Billing-System",
+        title: "Hospital Billing System (Academic - 3rd Year)",
+        img: "/assets/images/project-img/Hospital_billing_system.png",
+        description: "During my academic years, I developed a Hospital Billing System using Java and SQL to streamline billing for doctors, receptionists, and patients. It automated bill generation, tracked patient visits, and managed doctor fees, with data stored and queried through SQL. This system improved efficiency and ensured accurate, transparent billing.",
+        stacks: ["Java", "JFrame", "SQL"],
       },
     },
   ];
