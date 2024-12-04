@@ -95,7 +95,7 @@ const Experience = (): ReactElement => {
       <div>
         <a
           className="inline-flex items-baseline font-medium leading-tight text-gray-500 hover:text-gray-800 group/link text-base"
-          href="/assets/files/Resume.pdf"
+          href="/assets/files/cv.pdf"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="View Résumé"
