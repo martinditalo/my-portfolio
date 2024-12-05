@@ -3,11 +3,15 @@ import { Link } from "react-router-dom";
 import "./style.scss";
 
 const Nav = () => {
-
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked);
+  };
+
+  const scrollToProjects = () => {
+    const projectId = document.getElementById("projects-container");
+    projectId?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   useEffect(() => {
@@ -60,12 +64,17 @@ const Nav = () => {
               <span>About</span>
             </Link>
             <Link
-              to="/contact"
-              onClick={() => setIsChecked(false)}
+              to="/about"
+              onClick={() => {
+                setIsChecked(false);
+                setTimeout(() => {
+                  scrollToProjects();
+                }, 700);
+              }}
               className="menu-text menu-text--leda px-3"
-              data-text="Contact"
+              data-text="Projects"
             >
-              <span>Contact</span>
+              <span>Projects</span>
             </Link>
           </div>
           <a href="https://github.com/martinditalo">

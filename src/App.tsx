@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MainPage } from "./pages/main-page";
 import { AnimatedCursor } from "./components/animated-cursor";
 import { Page404 } from "./pages/page-404";
-import { Contact } from "./pages/contact";
 import { Loading } from "./components/loading";
 import { About } from "./pages/about";
 import { Nav } from "./components/hamburger-menu";
@@ -31,7 +30,6 @@ const App = (): ReactElement => {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
 
             {/* Add a catch-all route for 404 */}
             <Route path="*" element={<Page404 />} />
