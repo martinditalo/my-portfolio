@@ -13,6 +13,15 @@ const Projects = (): ReactElement => {
     },
     {
       projects: {
+        link: "https://github.com/martinditalo/registration-page/tree/dev",
+        title: "Registration Page",
+        img: "/assets/images/project-img/reg-page.png",
+        description: `As part of our training at Galactic Events Corporation, I developed a responsive registration page using Nuxt.js, Vue.js, VeeValidate, and the Quasar Framework. Nuxt provided a robust foundation, Vue ensured dynamic reactivity, VeeValidate streamlined form validation, and Quasar's UI components enhanced the design.`,
+        stacks: ["Nuxt", "Vue", "Vee Validate", "Quasar"],
+      },
+    },
+    {
+      projects: {
         link: "https://github.com/R2ZTracker",
         title: "R2Z Tracker (Academic - Capstone)",
         img: "/assets/images/project-img/R2Z.png",
@@ -25,7 +34,8 @@ const Projects = (): ReactElement => {
         link: "https://github.com/Hospital-Billing-System",
         title: "Hospital Billing System (Academic - 3rd Year)",
         img: "/assets/images/project-img/hospital_billing_system.png",
-        description: "During my academic years, I developed a Hospital Billing System using Java and SQL to streamline billing for doctors, receptionists, and patients. It automated bill generation, tracked patient visits, and managed doctor fees, with data stored and queried through SQL. This system improved efficiency and ensured accurate, transparent billing.",
+        description:
+          "During my academic years, I developed a Hospital Billing System using Java and SQL to streamline billing for doctors, receptionists, and patients. It automated bill generation, tracked patient visits, and managed doctor fees, with data stored and queried through SQL. This system improved efficiency and ensured accurate, transparent billing.",
         stacks: ["Java", "JFrame", "SQL"],
       },
     },
