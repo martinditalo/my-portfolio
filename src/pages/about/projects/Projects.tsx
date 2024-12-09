@@ -98,7 +98,7 @@ const Projects = (): ReactElement => {
                     height="48"
                     decoding="async"
                     data-nimg="1"
-                    className="rounded sm:order-1 sm:col-span-2 sm:translate-y-1 filter grayscale blur-[1px] hover:filter-none"
+                    className="rounded sm:order-1 sm:col-span-2 sm:translate-y-1 filter grayscale blur-[1px] hover:filter-none hover:scale-[1.2] lg:hover:scale-[2] transition-all z-20"
                     src={data.projects.img}
                   />
                 </div>
