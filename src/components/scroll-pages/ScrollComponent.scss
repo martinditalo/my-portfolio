@@ -1,0 +1,23 @@
+.page-wrapper {
+  height: 8651px !important;
+  width: 100%;
+}
+
+
+h1 {
+  font-size: 120px;
+}
+
+[data-scroll-container] {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  
+}
+.c-scrollbar{
+  height: 100vh !important;
+}
+.c-scrollbar_thumb {
+  background: #7a7977 !important;
+  height: 100px !important;
+}

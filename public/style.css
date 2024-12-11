@@ -1,0 +1,13 @@
+html,
+body {
+  position: relative;
+}
+body {
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  cursor: none;
+  user-select: none;
+}
+
