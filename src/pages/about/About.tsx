@@ -22,6 +22,12 @@ const About = (): ReactElement => {
     }
   };
 
+  const isInViewport = (el: HTMLElement) => {
+    const rect = el.getBoundingClientRect();
+    const threshold = window.innerHeight * 0.25;
+    return rect.top < window.innerHeight - threshold && rect.bottom > threshold;
+  };
+
   const checkInView = () => {
     if (div1Ref.current && div2Ref.current && div3Ref.current) {
       const div1InView = isInViewport(div1Ref.current);
@@ -34,17 +40,12 @@ const About = (): ReactElement => {
     }
   };
 
-  const isInViewport = (el: HTMLElement) => {
-    const rect = el.getBoundingClientRect();
-    return rect.top >= 0 && rect.bottom <= window.innerHeight;
-  };
-
   useEffect(() => {
     window.addEventListener("scroll", checkInView);
     return () => {
       window.removeEventListener("scroll", checkInView);
     };
-  });
+  }, []);
   return (
     <>
       <div className="about-container mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
@@ -260,8 +261,7 @@ const About = (): ReactElement => {
             <section
               ref={div2Ref}
               id="experience-container"
-              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-15 lg:scroll-mt-24"
-              aria-label="Work experience"
+              className="mb-16 scroll-mt-16 md:mb-10 lg:mb-15 lg:scroll-mt-24"
             >
               <div className="sticky top-0 z-30 -mx-6 mb-4 w-screen bg-gray-700/65 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
