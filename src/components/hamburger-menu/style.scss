@@ -67,7 +67,7 @@
 }
 
 .page-overlay {
-  background-color: #dbdbdb;
+  background-color: #2b2b2b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,6 +91,10 @@
   transition: 0.7s clip-path ease-in-out;
   transition: 0.7s clip-path ease-in-out, 0.7s -webkit-clip-path ease-in-out;
   font-size: clamp(1rem, 1vw + 1rem, 2rem);
+
+  svg {
+    fill: #e3e3e3;
+  }
 }
 
 .menu-text {
@@ -99,8 +103,7 @@
   cursor: pointer;
   position: relative;
   white-space: nowrap;
-
-
+  color: #e3e3e3;
 }
 
 .menu-text::before,
@@ -163,5 +166,6 @@
 }
 
 .menu-name {
+  color: #e3e3e3;
   font-family: "KolkerBrush", sans-serif;
 }

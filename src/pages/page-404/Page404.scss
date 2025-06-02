@@ -9,35 +9,60 @@
 
 .ants {
     fill: black;
-    width: 15px;
-    height: 25px;
+    width: 10px;
+    height: 15px;
     position: absolute;
 }
 
 #ant1 {
     left: 50%;
     bottom: -60%;
-    animation: ant-1-animation 8s infinite;
+    animation: ant-1-animation 50s infinite;
 }
 
 #ant2 {
     left: 0;
     bottom: -50%;
-    animation: ant-2-animation 9s infinite;
+    animation: ant-2-animation 30s infinite;
 }
 
 #ant3 {
     left: 100%;
     bottom: -70%;
-    animation: ant-3-animation 12s infinite;
-    animation-delay: 1s;
+    animation: ant-3-animation 40s infinite;
 }
 
 #ant4 {
     left: 0;
-    bottom: -50%;
-    animation: ant-2-animation 12s infinite;
-    animation-delay: 3s;
+    bottom: -70%;
+    animation: ant-2-animation 40s infinite;
+}
+
+#ant5 {
+    left: 50%;
+    bottom: -90%;
+    animation: ant-3-animation 30s infinite;
+}
+#ant6 {
+    width: 10px;
+    height: 10px;
+    left: 100%;
+    bottom: -80%;
+    animation: ant-1-animation 25s infinite;
+}
+#ant7 {
+    width: 10px;
+    height: 10px;
+    left: 100%;
+    bottom: -100%;
+    animation: ant-3-animation 50s infinite;
+}
+#ant8 {
+    width: 10px;
+    height: 10px;
+    left: 0;
+    bottom: -40%;
+    animation: ant-2-animation 25s infinite;
 }
 
 @keyframes ant-1-animation {
