@@ -45,7 +45,7 @@ const About = (): ReactElement => {
     return () => {
       window.removeEventListener("scroll", checkInView);
     };
-  }, []);
+  });
   return (
     <>
       <div className="about-container mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
@@ -236,10 +236,10 @@ const About = (): ReactElement => {
                 <p className="about-text mb-5">
                   I am currently working as a Software Engineer at&nbsp;
                   <a
-                    href="https://galaticevents.com/"
+                    href="https://www.linkedin.com/company/flexicon-solution-inc/"
                     className="text-gray-500/50 hover:text-slate-100 from-neutral-500 font-bold"
                   >
-                    Galactic Events Corporation
+                    Flexicon Solution Inc.
                   </a>
                   , My primary responsibility is front-end development, where I
                   work extensively with Vue.js and the Nuxt.js framework to

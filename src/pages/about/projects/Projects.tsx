@@ -16,7 +16,7 @@ const Projects = (): ReactElement => {
         link: "https://github.com/martinditalo/registration-page/tree/dev",
         title: "Registration Page",
         img: "/assets/images/project-img/reg-page.png",
-        description: `As part of our training at Galactic Events Corporation, I developed a responsive registration page using Nuxt.js, Vue.js, VeeValidate, and the Quasar Framework. Nuxt provided a robust foundation, Vue ensured dynamic reactivity, VeeValidate streamlined form validation, and Quasar's UI components enhanced the design.`,
+        description: `As part of our training at Flexicon Solution Inc., I developed a responsive registration page using Nuxt.js, Vue.js, VeeValidate, and the Quasar Framework. Nuxt provided a robust foundation, Vue ensured dynamic reactivity, VeeValidate streamlined form validation, and Quasar's UI components enhanced the design.`,
         stacks: ["Nuxt", "Vue", "Vee Validate", "Quasar"],
       },
     },
