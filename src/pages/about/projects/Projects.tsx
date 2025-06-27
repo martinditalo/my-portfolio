@@ -13,6 +13,15 @@ const Projects = (): ReactElement => {
     },
     {
       projects: {
+        link: "https://trash-man-tracker.vercel.app/",
+        title: "Trash Track",
+        img: "/assets/images/project-img/trash-track.png",
+        description: `Trash Tracker makes it easy to manage trash duties by automatically assigning who’s responsible each day. Whether it's for a household or team, the web app rotates assignments and sends timely reminders. Built with Next.js, React, and Firebase, Trash Tracker is fast, reliable, and designed for a seamless experience. Created using Firebase Studio, it ensures real-time updates and smooth functionality.`,
+        stacks: ["Next", "React", "Firebase", "Firebase studio"],
+      },
+    },
+    {
+      projects: {
         link: "https://github.com/martinditalo/registration-page/tree/dev",
         title: "Registration Page",
         img: "/assets/images/project-img/reg-page.png",
