@@ -4,7 +4,7 @@ const Experience = (): ReactElement => {
   const ExperienceData = [
     {
       experience: {
-        date: "July 2024 — Present",
+        date: "July 2024 — July 2025",
         link: "https://www.linkedin.com/company/flexicon-solution-inc/posts/?feedView=all",
         title: "Software Engineer - Flexicon Solution Inc.",
         description: `As a software engineer, I specialize in building and managing web applications using Vue.js, Nuxt.js, Quasar, Vuex, and Pinia. My expertise includes UI/UX design and development for online casino apps, ensuring functionality, responsiveness, and scalability. I leverage tools like Storybook for UI component development, Cypress for testing, and frameworks such as Vue 2 and Element UI to deliver high-quality solutions.`,

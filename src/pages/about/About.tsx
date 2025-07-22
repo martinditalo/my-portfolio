@@ -56,7 +56,7 @@ const About = (): ReactElement => {
                 <a href="/">Martin Ditalo</a>
               </h1>
               <h2 className="mt-3 text-xs font-medium tracking-tight  sm:text-base">
-                Front End Developer/Web Developer
+                Fullstack Developer/Web Developer
               </h2>
               <p className="mt-4 max-w-xs leading-normal font-mandali">
                 I create web experiences that are clear, user-friendly, and
@@ -227,22 +227,14 @@ const About = (): ReactElement => {
               </div>
               <div>
                 <p className="about-text mb-5">
-                  As a Front End Engineer, specializing in creating responsive
+                  As a Software Engineer, specializing in creating responsive
                   and user-friendly web applications. My technical skills
                   include HTML, CSS, SCSS, JavaScript, and frameworks such as
                   React, Vue.js, Nuxt, which I use to build dynamic and scalable
                   solutions. I focus on writing clean, maintainable code
                 </p>
                 <p className="about-text mb-5">
-                  I am currently working as a Software Engineer at&nbsp;
-                  <a
-                    href="https://www.linkedin.com/company/flexicon-solution-inc/"
-                    className="text-gray-500/50 hover:text-slate-100 from-neutral-500 font-bold"
-                  >
-                    Flexicon Solution Inc.
-                  </a>
-                  , My primary responsibility is front-end development, where I
-                  work extensively with Vue.js and the Nuxt.js framework to
+                  In my recent role as a Software Engineer I’ve been deeply involved in web development using Vue.js and Nuxt.js, framework to
                   build dynamic, high-performance web applications. My work
                   involves designing and implementing user-friendly interfaces,
                   optimizing performance, and ensuring seamless integration with
