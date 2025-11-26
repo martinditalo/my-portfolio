@@ -234,11 +234,12 @@ const About = (): ReactElement => {
                   solutions. I focus on writing clean, maintainable code
                 </p>
                 <p className="about-text mb-5">
-                  In my recent role as a Software Engineer I’ve been deeply involved in web development using Vue.js and Nuxt.js, framework to
-                  build dynamic, high-performance web applications. My work
-                  involves designing and implementing user-friendly interfaces,
-                  optimizing performance, and ensuring seamless integration with
-                  backend services.
+                  In my recent role as a Software Engineer I’ve been deeply
+                  involved in web development using Vue.js and Nuxt.js,
+                  framework to build dynamic, high-performance web applications.
+                  My work involves designing and implementing user-friendly
+                  interfaces, optimizing performance, and ensuring seamless
+                  integration with backend services.
                 </p>
                 <p className="about-text mb-5">
                   Collaboration and continuous learning are essential to my
