@@ -227,20 +227,24 @@ const About = (): ReactElement => {
               </div>
               <div>
                 <p className="about-text mb-5">
-                  As a Software Engineer, specializing in creating responsive
-                  and user-friendly web applications. My technical skills
-                  include HTML, CSS, SCSS, JavaScript, and frameworks such as
-                  React, Vue.js, Nuxt, which I use to build dynamic and scalable
-                  solutions. I focus on writing clean, maintainable code
+                  As a Software Engineer, I specialize in building responsive,
+                  user-friendly web applications. My technical stack includes
+                  HTML, CSS, SCSS, TypeScript, JavaScript, and Node.js, along
+                  with frameworks and libraries such as Angular, React, Vue.js,
+                  Next.js, Nuxt.js, and Express.js. I focus on writing clean,
+                  maintainable, and scalable code that supports long-term growth
+                  and performance.
                 </p>
+
                 <p className="about-text mb-5">
-                  In my recent role as a Software Engineer I’ve been deeply
-                  involved in web development using Vue.js and Nuxt.js,
-                  framework to build dynamic, high-performance web applications.
-                  My work involves designing and implementing user-friendly
-                  interfaces, optimizing performance, and ensuring seamless
-                  integration with backend services.
+                  I am deeply involved in full-stack web development, designing
+                  and implementing dynamic, high-performance applications. My
+                  work includes creating intuitive user interfaces, optimizing
+                  application performance, and ensuring seamless integration
+                  between frontend and backend services to deliver reliable
+                  end-to-end solutions.
                 </p>
+
                 <p className="about-text mb-5">
                   Collaboration and continuous learning are essential to my
                   approach. I thrive in agile environments, working alongside

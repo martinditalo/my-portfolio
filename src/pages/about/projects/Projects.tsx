@@ -31,7 +31,7 @@ const Projects = (): ReactElement => {
     },
     {
       projects: {
-        link: "https://github.com/R2ZTracker",
+        link: "https://github.com/R2ZTracker/R2Z_Tracker",
         title: "R2Z Tracker (Academic - Capstone)",
         img: "/assets/images/project-img/R2Z.png",
         description: `R2Z Tracker is a COVID-19 case tracking system for barangays in Olongapo City, built with Ionic Angular for the front-end and a PHP MySQL REST API for the back-end. It provides real-time case updates to help local officials and residents stay informed. The project aims to support efficient pandemic response at the barangay level.`,
