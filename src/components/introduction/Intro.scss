@@ -43,7 +43,7 @@ $particleSize: 25vmin;
 $animationDuration: 6s;
 $amount: 20;
 
-.intro-background span {
+.intro-background .particles {
     width: $particleSize;
     height: $particleSize;
     border-radius: $particleSize;
