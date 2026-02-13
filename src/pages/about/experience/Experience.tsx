@@ -7,7 +7,7 @@ const Experience = (): ReactElement => {
         date: "July 2024 — July 2025",
         link: "https://www.linkedin.com/company/flexicon-solution-inc/posts/?feedView=all",
         title: "Software Engineer - Flexicon Solution Inc.",
-        description: `As a Software Engineer, I specialize in building and maintaining scalable web applications using Vue.js, Nuxt.js, Quasar, React, Vuex, and Pinia. I develop full-stack solutions with Node.js and Express.js, designing and integrating RESTful APIs to support dynamic, data-driven applications. I focus on UI/UX design and frontend development for online casino platforms, ensuring high performance, responsiveness, and seamless user experience across devices. I leverage Storybook for component-driven development and Cypress for end-to-end testing, and work with Element UI to deliver reliable, production-ready solutions.`,
+        description: `As a Software Engineer, I specialize in building and maintaining scalable web applications using Vue.js, Nuxt.js, Quasar, React. I develop full-stack solutions with Node.js and Express.js, designing and integrating RESTful APIs to support dynamic, data-driven applications. I focus on UI/UX design and frontend development for online casino platforms, ensuring high performance, responsiveness, and seamless user experience across devices. I leverage Storybook for component-driven development and Cypress for end-to-end testing, and work with Element UI to deliver reliable, production-ready solutions.`,
         stacks: [
           "React",
           "Redux",
