@@ -7,10 +7,14 @@ const Experience = (): ReactElement => {
         date: "July 2024 — July 2025",
         link: "https://www.linkedin.com/company/flexicon-solution-inc/posts/?feedView=all",
         title: "Software Engineer - Flexicon Solution Inc.",
-        description: `As a software engineer, I specialize in building and managing web applications using Vue.js, Nuxt.js, Quasar, Vuex, and Pinia. My expertise includes UI/UX design and development for online casino apps, ensuring functionality, responsiveness, and scalability. I leverage tools like Storybook for UI component development, Cypress for testing, and frameworks such as Vue 2 and Element UI to deliver high-quality solutions.`,
+        description: `As a Software Engineer, I specialize in building and maintaining scalable web applications using Vue.js, Nuxt.js, Quasar, React. I develop full-stack solutions with Node.js and Express.js, designing and integrating RESTful APIs to support dynamic, data-driven applications. I focus on UI/UX design and frontend development for online casino platforms, ensuring high performance, responsiveness, and seamless user experience across devices. I leverage Storybook for component-driven development and Cypress for end-to-end testing, and work with Element UI to deliver reliable, production-ready solutions.`,
         stacks: [
+          "React",
+          "Redux",
           "Vue",
           "Vuex",
+          "Express",
+          "Node.js",
           "Pinia",
           "Cypress",
           "Nuxt",
@@ -27,8 +31,19 @@ const Experience = (): ReactElement => {
         date: "March 2022 — March 2024",
         link: "https://www.lpstech.com/site/en/home",
         title: "Solution Developer (React JS) - LPS",
-        description: `As a Solution Developer (React JS), I build dynamic web applications using React, MUI, Typescript, Formik, Jest, and React Query. I focus on creating scalable, high-performance solutions with seamless user experiences. My role involves developing and testing features, while optimizing both functionality and UI.`,
-        stacks: ["React", "React Query", "MUI", "Typescript", "Jest", "Formik"],
+        description: `As a Solution Developer (React JS), I build dynamic web applications using React, MUI, TypeScript, Redux, Formik, Jest, and React Query. I focus on developing scalable, high-performance frontend architectures with seamless user experiences. On the backend, I work with Java and Spring Boot to build and integrate RESTful APIs, ensuring secure, maintainable, and efficient server-side functionality. My role involves developing and testing features, managing state effectively, and optimizing both application logic and UI performance.`,
+        stacks: [
+          "React",
+          "Redux",
+          "React Query",
+          "Node JS",
+          "MUI",
+          "Typescript",
+          "Jest",
+          "Formik",
+          "Java",
+          "Spring Boot",
+        ],
       },
     },
     {
@@ -36,8 +51,16 @@ const Experience = (): ReactElement => {
         date: "Feb 2021 — June 2021",
         link: "https://iformatlogic.com/",
         title: "Web Developer (OJT) - iFormatLogic",
-        description: `During my OJT as a web developer, I worked with PHP Laravel, MySQL, JavaScript, and Bootstrap to build dynamic, responsive web applications. I gained hands-on experience in both front-end and back-end development, creating user-friendly and functional websites. This internship strengthened my skills in web development and teamwork.`,
-        stacks: ["PHP", "Laravel", "Javascript", "Bootstrap", "MySQL"],
+        description: `During my OJT as a Web Developer, I worked with PHP Laravel, MySQL, JavaScript, Bootstrap, Vue, and React to build dynamic and responsive web applications. I gained hands-on experience in both frontend and backend development, developing user-friendly interfaces and implementing functional server-side features. This internship strengthened my technical foundation in web development while enhancing my collaboration and teamwork skills in a real-world development environment.`,
+        stacks: [
+          "Vue",
+          "React",
+          "Laravel",
+          "PHP",
+          "Javascript",
+          "Bootstrap",
+          "MySQL",
+        ],
       },
     },
   ];
@@ -98,7 +121,7 @@ const Experience = (): ReactElement => {
       <div className="lg:px-3">
         <a
           className="inline-flex items-baseline font-medium leading-tight text-gray-500 hover:text-gray-800 group/link text-base"
-          href="/assets/files/Ditalo_Martin_CV.pdf"
+          href="/assets/files/Ditalo_Martin-CV.pdf"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="View Résumé"

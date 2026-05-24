@@ -5,7 +5,6 @@ import "./Intro.scss";
 const Intro = (): ReactElement => {
   const location = useLocation();
 
-  // Use refs instead of document.getElementById to ensure elements exist before use
   const text1Ref = useRef<HTMLSpanElement | null>(null);
   const text2Ref = useRef<HTMLSpanElement | null>(null);
 
@@ -45,7 +44,7 @@ const Intro = (): ReactElement => {
     if (text2Ref.current) {
       text2Ref.current.style.filter = `blur(${Math.min(
         8 / fraction - 8,
-        100
+        100,
       )}px)`;
       text2Ref.current.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
     }
@@ -55,7 +54,7 @@ const Intro = (): ReactElement => {
     if (text1Ref.current) {
       text1Ref.current.style.filter = `blur(${Math.min(
         8 / fraction - 8,
-        100
+        100,
       )}px)`;
       text1Ref.current.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
     }
@@ -115,26 +114,9 @@ const Intro = (): ReactElement => {
   return (
     <>
       <div className="intro-background">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        {Array.from({ length: 20 }).map((_, i) => (
+          <span className="particles" key={i}></span>
+        ))}
       </div>
       <div id="intro-container">
         <span id="text1" ref={text1Ref}></span>
