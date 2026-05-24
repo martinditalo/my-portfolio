@@ -16,7 +16,7 @@ const Nav = () => {
 
   useEffect(() => {
     const aboutContainer = document.querySelector(
-      ".about-container"
+      ".about-container",
     ) as HTMLElement;
 
     if (aboutContainer !== null && isChecked) {
@@ -56,7 +56,7 @@ const Nav = () => {
               <span>Home</span>
             </Link>
             <Link
-              to="/about"
+              to="/about-projects"
               onClick={() => setIsChecked(false)}
               className="menu-text menu-text--leda px-3"
               data-text="About"
@@ -64,7 +64,7 @@ const Nav = () => {
               <span>About</span>
             </Link>
             <Link
-              to="/about"
+              to="/about-projects"
               onClick={() => {
                 setIsChecked(false);
                 setTimeout(() => {

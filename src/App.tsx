@@ -29,7 +29,7 @@ const App = (): ReactElement => {
           {/* Define Routes */}
           <Routes>
             <Route path="/" element={<MainPage />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/about-projects" element={<About />} />
 
             {/* Add a catch-all route for 404 */}
             <Route path="*" element={<Page404 />} />
