@@ -10,12 +10,11 @@ const Intro = (): ReactElement => {
 
   const texts: string[] = [
     "Hello!",
-    "I'm",
-    "Martin",
-    "Web Developer",
+    "I'm Martin",
     "Software Engineer",
+    "FullStack Developer",
     "Front End Developer",
-    "Nice to meet you!",
+    "Code • Create • Deploy",
   ];
 
   const morphTime: number = 1;
