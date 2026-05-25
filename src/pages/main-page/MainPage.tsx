@@ -6,7 +6,11 @@ const MainPage = (): ReactElement => {
   return (
     <>
       <main className="main-wrapper">
-        <section className="intro-section h-screen" data-scroll data-scroll-speed="0">
+        <section
+          className="intro-section h-screen"
+          data-scroll
+          data-scroll-speed="0"
+        >
           <Intro />
         </section>
       </main>

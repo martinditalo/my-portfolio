@@ -56,7 +56,7 @@ const About = (): ReactElement => {
                 <a href="/">Martin Ditalo</a>
               </h1>
               <h2 className="mt-3 text-xs font-medium tracking-tight  sm:text-base">
-                Fullstack Developer/Web Developer
+                Fullstack Developer/AI Enthusiast
               </h2>
               <p className="mt-4 max-w-xs leading-normal font-mandali">
                 I create web experiences that are clear, user-friendly, and

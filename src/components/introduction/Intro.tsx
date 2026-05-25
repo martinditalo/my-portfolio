@@ -13,7 +13,7 @@ const Intro = (): ReactElement => {
     "I'm Martin",
     "Software Engineer",
     "FullStack Developer",
-    "Front End Developer",
+    "AI Enthusiast",
     "Code • Create • Deploy",
   ];
 

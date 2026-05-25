@@ -6,6 +6,7 @@ import { Page404 } from "./pages/page-404";
 import { Loading } from "./components/loading";
 import { About } from "./pages/about";
 import { Nav } from "./components/hamburger-menu";
+import ChatBot from "./components/chat-bot/ChatBot";
 
 const App = (): ReactElement => {
   const [loading, setLoading] = useState(true);
@@ -34,6 +35,8 @@ const App = (): ReactElement => {
             {/* Add a catch-all route for 404 */}
             <Route path="*" element={<Page404 />} />
           </Routes>
+
+          <ChatBot />
         </Router>
       )}
     </>
