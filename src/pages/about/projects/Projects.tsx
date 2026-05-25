@@ -4,11 +4,35 @@ const Projects = (): ReactElement => {
   const ProjectsData = [
     {
       projects: {
+        link: "https://github.com/martinditalo/my-portfolio-ai-backend",
+        title: "AI Chat Assistant",
+        img: "/assets/images/project-img/chatbot.png",
+        description: `Developed an AI-powered chat assistant backend that processes user messages and generates intelligent responses using Gemini AI. Built with Node.js and Express, the API supports real-time communication, secure CORS configuration, and scalable deployment on Railway. Designed with TypeScript and JavaScript for maintainability and clean server-side architecture. Added this AI chat assistant feature to my portfolio website to provide an interactive and engaging user experience.`,
+        stacks: [
+          "Node.js",
+          "Express",
+          "Gemini AI",
+          "Railway",
+          "CORS",
+          "Typescipt",
+          "Javascript",
+        ],
+      },
+    },
+    {
+      projects: {
         link: "https://github.com/martinditalo/my-portfolio",
         title: "My Portfolio",
         img: "/assets/images/project-img/portfolio.png",
         description: `Explore my work and professional experience through the interactive features of my portfolio, built with React, TypeScript, and Tailwind CSS for a fast, responsive experience. React and TypeScript ensure scalability and maintainability, while Tailwind CSS enables clean, customizable styling.`,
-        stacks: ["React", "Tailwind", "SCSS", "Typescript", "Javascript"],
+        stacks: [
+          "React.js",
+          "Tailwind CSS",
+          "SCSS",
+          "TypeScript",
+          "JavaScript",
+          "Axios",
+        ],
       },
     },
     {
@@ -17,7 +41,14 @@ const Projects = (): ReactElement => {
         title: "Trash Track",
         img: "/assets/images/project-img/trash-track.png",
         description: `Trash Tracker makes it easy to manage trash duties by automatically assigning who’s responsible each day. Whether it's for a household or team, the web app rotates assignments and sends timely reminders. Built with Next.js, React, and Firebase, Trash Tracker is fast, reliable, and designed for a seamless experience. Created using Firebase Studio, it ensures real-time updates and smooth functionality.`,
-        stacks: ["Next", "React", "Firebase", "Firebase studio"],
+        stacks: [
+          "Next.js",
+          "React.js",
+          "TypeScript",
+          "JavaScript",
+          "Firebase",
+          "Firebase studio",
+        ],
       },
     },
     {
@@ -26,7 +57,14 @@ const Projects = (): ReactElement => {
         title: "Registration Page",
         img: "/assets/images/project-img/reg-page.png",
         description: `As part of our training at Flexicon Solution Inc., I developed a responsive registration page using Nuxt.js, Vue.js, VeeValidate, and the Quasar Framework. Nuxt provided a robust foundation, Vue ensured dynamic reactivity, VeeValidate streamlined form validation, and Quasar's UI components enhanced the design.`,
-        stacks: ["Nuxt", "Vue", "Vee Validate", "Quasar"],
+        stacks: [
+          "Nuxt.js",
+          "Vue.js",
+          "TypeScript",
+          "JavaScript",
+          "VeeValidate",
+          "Quasar",
+        ],
       },
     },
     {
@@ -35,7 +73,19 @@ const Projects = (): ReactElement => {
         title: "R2Z Tracker (Academic - Capstone)",
         img: "/assets/images/project-img/R2Z.png",
         description: `R2Z Tracker is a COVID-19 case tracking system for barangays in Olongapo City, built with Ionic Angular for the front-end and a PHP MySQL REST API for the back-end. It provides real-time case updates to help local officials and residents stay informed. The project aims to support efficient pandemic response at the barangay level.`,
-        stacks: ["Ionic", "Angular", "Bootstrap", "MySQL", "PHP", "NPM"],
+        stacks: [
+          "Ionic",
+          "Angular",
+          "Bootstrap",
+          "TypeScript",
+          "JavaScript",
+          "Android Studio",
+          "Capacitor",
+          "SCSS",
+          "MySQL",
+          "PHP",
+          "NPM",
+        ],
       },
     },
     {
@@ -45,7 +95,15 @@ const Projects = (): ReactElement => {
         img: "/assets/images/project-img/hospital_billing_system.png",
         description:
           "During my academic years, I developed a Hospital Billing System using Java and SQL to streamline billing for doctors, receptionists, and patients. It automated bill generation, tracked patient visits, and managed doctor fees, with data stored and queried through SQL. This system improved efficiency and ensured accurate, transparent billing.",
-        stacks: ["Java", "JFrame", "SQL"],
+        stacks: [
+          "JasperReports",
+          "JFrame",
+          "Java",
+          "NetBeans",
+          "MYSQL",
+          "JDBC",
+          "SQL",
+        ],
       },
     },
   ];
