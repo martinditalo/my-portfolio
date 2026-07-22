@@ -6,7 +6,7 @@
 
 .glass {
     z-index: 2;
-    height: 110%;
+    height: 145%;
     width: 95px;
     margin-right: 25px;
     padding: 8px;
@@ -94,6 +94,7 @@
 
 .wrapper {
     display: flex;
+    gap: 2px;
     list-style: none;
     height: 120px;
     width: 100%;
@@ -106,10 +107,10 @@
     position: relative;
     background: #e8e8e8;
     margin: 5px;
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     font-size: 18px;
-    border-radius: 15px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -6,7 +6,7 @@ const Experience = (): ReactElement => {
       experience: {
         date: "July 2024 — July 2025",
         link: "https://www.linkedin.com/company/flexicon-solution-inc/posts/?feedView=all",
-        title: "Software Engineer - Flexicon Solution Inc.",
+        title: "Mid-level Software Engineer - Flexicon Solution Inc.",
         description: `As a Software Engineer, I specialize in building and maintaining scalable web applications using Vue.js, Nuxt.js, Quasar, React. I develop full-stack solutions with Node.js and Express.js, designing and integrating RESTful APIs to support dynamic, data-driven applications. I focus on UI/UX design and frontend development for online casino platforms, ensuring high performance, responsiveness, and seamless user experience across devices. I leverage Storybook for component-driven development and Cypress for end-to-end testing, and work with Element UI to deliver reliable, production-ready solutions.`,
         stacks: [
           "React",
@@ -30,8 +30,8 @@ const Experience = (): ReactElement => {
       experience: {
         date: "March 2022 — March 2024",
         link: "https://www.lpstech.com/site/en/home",
-        title: "Solution Developer (React JS) - LPS",
-        description: `As a Solution Developer (React JS), I build dynamic web applications using React, MUI, TypeScript, Redux, Formik, Jest, and React Query. I focus on developing scalable, high-performance frontend architectures with seamless user experiences. On the backend, I work with Java and Spring Boot to build and integrate RESTful APIs, ensuring secure, maintainable, and efficient server-side functionality. My role involves developing and testing features, managing state effectively, and optimizing both application logic and UI performance.`,
+        title: "Solutions Developer - LPS",
+        description: `As a Solutions Developer, I build dynamic web applications using React, MUI, TypeScript, Redux, Formik, Jest, and React Query. I focus on developing scalable, high-performance frontend architectures with seamless user experiences. On the backend, I work with Java and Spring Boot to build and integrate RESTful APIs, ensuring secure, maintainable, and efficient server-side functionality. My role involves developing and testing features, managing state effectively, and optimizing both application logic and UI performance.`,
         stacks: [
           "React",
           "Redux",
@@ -50,8 +50,8 @@ const Experience = (): ReactElement => {
       experience: {
         date: "Feb 2021 — June 2021",
         link: "https://iformatlogic.com/",
-        title: "Web Developer (OJT) - iFormatLogic",
-        description: `During my OJT as a Web Developer, I worked with PHP Laravel, MySQL, JavaScript, Bootstrap, Vue, and React to build dynamic and responsive web applications. I gained hands-on experience in both frontend and backend development, developing user-friendly interfaces and implementing functional server-side features. This internship strengthened my technical foundation in web development while enhancing my collaboration and teamwork skills in a real-world development environment.`,
+        title: "Web Developer (Intern) - iFormatLogic",
+        description: `During my internship as a Web Developer, I worked with PHP Laravel, MySQL, JavaScript, Bootstrap, Vue, and React to build dynamic and responsive web applications. I gained hands-on experience in both frontend and backend development, developing user-friendly interfaces and implementing functional server-side features. This internship strengthened my technical foundation in web development while enhancing my collaboration and teamwork skills in a real-world development environment.`,
         stacks: [
           "Vue",
           "React",
