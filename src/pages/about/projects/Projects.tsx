@@ -4,6 +4,23 @@ const Projects = (): ReactElement => {
   const ProjectsData = [
     {
       projects: {
+        link: "https://mlogic-systems.vercel.app/",
+        title: "MLogic Systems",
+        img: "/assets/images/project-img/mlogic.png",
+        description: `MLogic Systems is a modern software consulting and development agency website built to showcase custom digital solutions for businesses. The platform highlights services including custom web development, mobile applications, business management systems, AI-powered solutions, cloud integration, and software consulting. Developed with a focus on performance, scalability, and user experience, the website features a modern responsive design, service portfolio, project showcase, and consultation inquiry system. Designed to establish a professional online presence, MLogic Systems serves as a foundation for delivering innovative software solutions that help businesses automate processes, improve efficiency, and accelerate digital transformation.`,
+        stacks: [
+          "React.js",
+          "Next.js",
+          "Typescript",
+          "Javascript",
+          "Tailwind CSS",
+          "Codex",
+          "Zod",
+        ],
+      },
+    },
+    {
+      projects: {
         link: "https://github.com/martinditalo/my-portfolio-ai-backend",
         title: "AI Chat Assistant",
         img: "/assets/images/project-img/chatbot.png",
@@ -14,7 +31,7 @@ const Projects = (): ReactElement => {
           "Gemini AI",
           "Railway",
           "CORS",
-          "Typescipt",
+          "Typescript",
           "Javascript",
         ],
       },
