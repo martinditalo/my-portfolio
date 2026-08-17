@@ -4,6 +4,15 @@ const Certifications = (): ReactElement => {
   const CertificationsData = [
     {
       certification: {
+        date: "August 17, 2026",
+        title: "AWS Cloud Quest: Cloud Practitioner",
+        issuer: "Amazon Web Services Training and Certification",
+        link: "https://www.credly.com/badges/8a8e8e83-55b6-4e4f-a025-84322324a592/public_url",
+        img: "/assets/images/certification-img/aws-cloud-practitioner-badge.webp",
+      },
+    },
+    {
+      certification: {
         date: "July 22, 2026",
         title: "Generative AI Fundamentals",
         issuer: "Databricks Academy",
