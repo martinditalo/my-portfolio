@@ -40,15 +40,6 @@ const Certifications = (): ReactElement => {
     },
     {
       certification: {
-        date: "July 17, 2024",
-        title: "Vue.js Course",
-        issuer: "CodeCademy",
-        link: "https://www.codecademy.com/profiles/MartinDitalo/certificates/db927a84bf4bba96bb285ee6a85466fc",
-        img: "/assets/images/certification-img/codecademy.webp",
-      },
-    },
-    {
-      certification: {
         date: "July 12, 2024",
         title: "Sass Course",
         issuer: "CodeCademy",

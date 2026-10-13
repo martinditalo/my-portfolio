@@ -33,7 +33,12 @@ const About = (): ReactElement => {
   };
 
   const checkInView = () => {
-    if (div1Ref.current && div2Ref.current && div3Ref.current && div4Ref.current) {
+    if (
+      div1Ref.current &&
+      div2Ref.current &&
+      div3Ref.current &&
+      div4Ref.current
+    ) {
       const div1InView = isInViewport(div1Ref.current);
       const div2InView = isInViewport(div2Ref.current);
       const div3InView = isInViewport(div3Ref.current);
@@ -62,7 +67,7 @@ const About = (): ReactElement => {
                 <a href="/">Martin Ditalo</a>
               </h1>
               <h2 className="mt-3 text-xs font-medium tracking-tight  sm:text-base">
-                Fullstack Developer/AI Enthusiast
+                Fullstack Developer/AI Engineer
               </h2>
               <p className="mt-4 max-w-xs leading-normal font-mandali">
                 I'm a Full-Stack Software Engineer building scalable,
@@ -233,10 +238,9 @@ const About = (): ReactElement => {
                   As a Full-Stack Software Engineer, I specialize in building
                   responsive, user-friendly web applications. My technical stack
                   includes HTML, CSS, SCSS, TypeScript, JavaScript, and Node.js,
-                  along with frameworks and libraries such as Angular, React,
-                  Vue.js, Next.js, Nuxt.js, and Express.js. I focus on writing
-                  clean, maintainable, and scalable code that supports long-term
-                  growth and performance.
+                  along with frameworks and libraries such React.js, Next.js,
+                  and Express.js. I focus on writing clean, maintainable, and
+                  scalable code that supports long-term growth and performance.
                 </p>
 
                 <p className="about-text mb-5">
